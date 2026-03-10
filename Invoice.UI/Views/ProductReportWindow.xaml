@@ -1,0 +1,82 @@
+﻿<Window x:Class="Invoice.UI.Views.ProductReportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="تقرير المنتجات" Height="600" Width="1000"
+        Background="#f5f6fa" WindowStartupLocation="CenterScreen">
+
+    <DockPanel Margin="10">
+
+        <!-- ✅ الفلترة -->
+        <Border DockPanel.Dock="Top"
+                Background="#2c3e50"
+                CornerRadius="8"
+                Padding="10"
+                Margin="0,0,0,10">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <TextBlock Text="السنة:" Foreground="White"
+                           FontWeight="Bold"
+                           VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <ComboBox Width="120"
+                          ItemsSource="{Binding Years}"
+                          SelectedItem="{Binding SelectedYear}"
+                          Margin="0,0,20,0"/>
+
+                <TextBlock Text="الشهر:" Foreground="White"
+                           FontWeight="Bold"
+                           VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <ComboBox Width="120"
+                          ItemsSource="{Binding Months}"
+                          SelectedItem="{Binding SelectedMonth}"/>
+            </StackPanel>
+        </Border>
+
+        <!-- ✅ الجدول -->
+        <Border CornerRadius="8" BorderBrush="#bdc3c7" BorderThickness="1" Background="White" Padding="5">
+            <DataGrid ItemsSource="{Binding Reports}" AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      CanUserAddRows="False"
+                      HeadersVisibility="Column"
+                      AlternatingRowBackground="#ecf0f1"
+                      RowBackground="White"
+                      GridLinesVisibility="None"
+                      Margin="0"
+                      BorderThickness="0"
+                      FontSize="14"
+                      FontFamily="Segoe UI"
+                      RowHeight="35"
+                      HorizontalAlignment="Stretch">
+
+                <DataGrid.Resources>
+                    <!-- ✅ توسيط النصوص داخل الخلايا -->
+                    <Style TargetType="DataGridCell">
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        <Setter Property="VerticalContentAlignment" Value="Center"/>
+                        <Setter Property="Padding" Value="5,0"/>
+                    </Style>
+
+                    <!-- ✅ تنسيق رؤوس الأعمدة -->
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="Background" Value="#34495e"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        <Setter Property="Padding" Value="5"/>
+                        <Setter Property="Height" Value="35"/>
+                    </Style>
+                </DataGrid.Resources>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="الإجمالي الكلي" Binding="{Binding GrandTotal, StringFormat={}{0:N2}}" Width="*" />
+                    <DataGridTextColumn Header="إجمالي الضرائب" Binding="{Binding TotalTax, StringFormat={}{0:N2}}" Width="*" />
+                    <DataGridTextColumn Header="إجمالي المبيعات" Binding="{Binding TotalSales, StringFormat={}{0:N2}}" Width="*" />
+                    <DataGridTextColumn Header="إجمالي الكمية" Binding="{Binding TotalQuantity}" Width="*" />
+                    <DataGridTextColumn Header="السعر" Binding="{Binding Price, StringFormat={}{0:N2}}" Width="*" />
+                    <DataGridTextColumn Header="النوع" Binding="{Binding Kind}" Width="*" />
+                    <DataGridTextColumn Header="الكود الداخلي" Binding="{Binding InternalCode}" Width="2*" />
+                    <DataGridTextColumn Header="السنة" Binding="{Binding Year}" Width="0.8*" />
+                    <DataGridTextColumn Header="الشهر" Binding="{Binding Month}" Width="0.8*" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+    </DockPanel>
+</Window>

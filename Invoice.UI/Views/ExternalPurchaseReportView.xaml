@@ -1,0 +1,171 @@
+﻿<Window x:Class="Invoice.UI.Views.ExternalPurchaseReportView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:Invoice.UI.ViewModels"
+        mc:Ignorable="d"
+        Title="تقرير المشتريات الخارجية"
+        Height="700" Width="1200"
+        Background="#F9FAFB"
+        WindowStartupLocation="CenterScreen"
+        FlowDirection="LeftToRight">
+
+    <Grid Margin="20" FlowDirection="RightToLeft">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- ✅ الشريط العلوي -->
+        <Border Background="#E0E7FF" Padding="10" CornerRadius="6" Margin="0,0,0,10">
+            <DockPanel LastChildFill="False">
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" VerticalAlignment="Center">
+                    <TextBlock Text="رقم الشهاده:" FontWeight="Bold" FontSize="14" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                    <ComboBox Width="250"
+                              FontSize="13"
+                              Padding="4"
+                              ItemsSource="{Binding ItemDescriptions}"
+                              SelectedItem="{Binding SelectedDescription, Mode=TwoWay}"
+                              Margin="0,0,20,0"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Left">
+                    <Button Content="تحميل التقرير"
+            Command="{Binding LoadReportCommand}"
+            Margin="0,0,10,0"
+            Padding="12,6"
+            FontWeight="Bold"
+            Background="#3B82F6"
+            Foreground="White"
+            BorderThickness="0"
+            Cursor="Hand"/>
+
+                    <Button Content="تصدير إلى Excel"
+            Command="{Binding ExportToExcelCommand}"
+            Margin="0,0,10,0"
+            Padding="12,6"
+            FontWeight="Bold"
+            Background="#10B981"
+            Foreground="White"
+            BorderThickness="0"
+            Cursor="Hand"/>
+
+                    <!-- ✅ زر الحذف -->
+                    <Button Content="حذف الفاتورة"
+            Command="{Binding DeleteSelectedCommand}"
+            Padding="12,6"
+            FontWeight="Bold"
+            Background="#EF4444"
+            Foreground="White"
+            BorderThickness="0"
+            Cursor="Hand"/>
+                </StackPanel>
+
+            </DockPanel>
+        </Border>
+
+        <!-- ✅ جدول التقرير -->
+        <Border Grid.Row="1" CornerRadius="8" BorderBrush="#CBD5E1" BorderThickness="1" Background="White" Padding="5">
+            <DataGrid ItemsSource="{Binding ReportEntries}"
+                      SelectedItem="{Binding SelectedReport, Mode=TwoWay}"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      IsReadOnly="True"
+                      AlternatingRowBackground="#F1F5F9"
+                      FontSize="14"
+                      HeadersVisibility="Column"
+                      RowHeaderWidth="0"
+                      GridLinesVisibility="None">
+
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <Style.Triggers>
+
+                            <!-- فقط لون الخط أحمر للفاتورة المرتجع -->
+                            <DataTrigger Binding="{Binding IsReturn}" Value="True">
+                                <Setter Property="Foreground" Value="Red"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <!-- اختياري -->
+                            </DataTrigger>
+
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.RowStyle>
+
+
+                <DataGrid.Resources>
+                    <!-- ترويسة أنيقة -->
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="#3B82F6"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="FontSize" Value="14"/>
+                        <Setter Property="Padding" Value="6"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        <Setter Property="Height" Value="30"/>
+                    </Style>
+                </DataGrid.Resources>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="التاريخ" Binding="{Binding ReportDate, StringFormat=dd/MM/yyyy}" Width="120"/>
+                    <DataGridTextColumn Header="رقم المستند" Binding="{Binding InternalId}" Width="150"/>
+                    <DataGridTextColumn Header="رقم الشهادة" Binding="{Binding ItemDetails}" Width="200"/>
+                    <DataGridTextColumn Header="البيان" Binding="{Binding ItemName}" Width="200"/>
+                    <DataGridTextColumn Header="القيمة" Binding="{Binding NumericValue, StringFormat={}{0:N2}}" Width="120"/>
+                    <DataGridTextColumn Header="ض.ق.م" Binding="{Binding TaxT1, StringFormat={}{0:N2}}" Width="120"/>
+                    <DataGridTextColumn Header="ض.ا.ت" Binding="{Binding TaxT4, StringFormat={}{0:N2}}" Width="120" />
+                    <DataGridTextColumn Header="ضريبة الوارد" Binding="{Binding ImportTax, StringFormat={}{0:N2}}" Width="120"/>
+                    <DataGridTextColumn Header="الرسوم" Binding="{Binding Fees, StringFormat={}{0:N2}}" Width="120"/>
+                    <DataGridTextColumn Header="الإجمالي" Binding="{Binding Total, StringFormat={}{0:N2}}" Width="120"/>
+                    <DataGridTextColumn Header="رقم السداد الإلكتروني" Binding="{Binding EPaymentNumber}" Width="180"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+
+        <!-- ✅ صف الإجماليات -->
+        <Border Grid.Row="2" Background="#F3F4F6" BorderBrush="#CBD5E1" BorderThickness="1" CornerRadius="6" Padding="10" Margin="0,10,0,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" FlowDirection="RightToLeft">
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="المشتريات:" VerticalAlignment="Center" Margin="0,0,5,0" FontWeight="Bold"/>
+                    <TextBox Width="150" Text="{Binding TotalPurchases, StringFormat={}{0:N2}}"
+              IsReadOnly="True" HorizontalContentAlignment="Right"
+              Background="White" BorderBrush="#D1D5DB" BorderThickness="1" FontWeight="Bold"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="ض.ق.م:" VerticalAlignment="Center" Margin="0,0,5,0" FontWeight="Bold"/>
+                    <TextBox Width="120" Text="{Binding TotalTaxT1, StringFormat={}{0:N2}}"
+                             IsReadOnly="True" HorizontalContentAlignment="Right"
+                             Background="White" BorderBrush="#D1D5DB" BorderThickness="1" FontWeight="Bold"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="ض.ا.ت:" VerticalAlignment="Center" Margin="0,0,5,0" FontWeight="Bold"/>
+                    <TextBox Width="120" Text="{Binding TotalTaxT4, StringFormat={}{0:N2}}"
+                             IsReadOnly="True" HorizontalContentAlignment="Right"
+                             Background="White" BorderBrush="#D1D5DB" BorderThickness="1" FontWeight="Bold"/>
+                </StackPanel>
+
+               
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="إجمالي المشتريات:" VerticalAlignment="Center" Margin="0,0,5,0" FontWeight="Bold"/>
+                    <TextBox Width="150" Text="{Binding TotalAmount, StringFormat={}{0:N2}}"
+                             IsReadOnly="True" HorizontalContentAlignment="Right"
+                             Background="White" BorderBrush="#D1D5DB" BorderThickness="1" FontWeight="Bold"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!-- ✅ موارد عامة -->
+        <Grid.Resources>
+            <Style x:Key="RightAlignStyle" TargetType="TextBlock">
+                <Setter Property="TextAlignment" Value="Right"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            </Style>
+        </Grid.Resources>
+    </Grid>
+</Window>

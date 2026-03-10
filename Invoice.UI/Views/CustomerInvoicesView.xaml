@@ -1,0 +1,147 @@
+﻿<Window x:Class="Invoice.UI.Views.CustomerInvoicesView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanResize"
+        Title="فواتير العملاء"
+        Width="1200" Height="700"
+        Background="#F2F2F7">
+
+    <Border Margin="15" Background="White" CornerRadius="10" Padding="15" BorderBrush="#DDD" BorderThickness="1">
+        <DockPanel>
+
+            <!-- Header -->
+            <StackPanel DockPanel.Dock="Top" Margin="0 0 0 15">
+                <TextBlock Text="فواتير العملاء" 
+                           FontSize="26"
+                           HorizontalAlignment="Center"
+                           Margin="0 0 0 10" 
+                           FontWeight="Bold" />
+            </StackPanel>
+
+            <!-- Filter Panel -->
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0 0 0 10" HorizontalAlignment="Center">
+
+                <StackPanel>
+                    <TextBlock Text="من تاريخ" Margin="0 0 0 5"/>
+                    <DatePicker SelectedDate="{Binding FromDate}" Width="150"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Text="إلى تاريخ" Margin="0 0 0 5"/>
+                    <DatePicker SelectedDate="{Binding ToDate}" Width="150"/>
+                </StackPanel>
+
+                <Button Content="تصفية" 
+                        Command="{Binding FilterCommand}"
+                        Width="120" Height="35"
+                        Background="#4A90E2" Foreground="White"
+                        FontSize="16"
+                        Cursor="Hand"
+                        />
+                <Button Content="تصدير Excel"
+        Command="{Binding ExportExcelCommand}"
+        Width="150" Height="35"
+        Background="#27AE60"
+        Foreground="White"
+        FontSize="16"
+        Cursor="Hand"/>
+
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0 10" HorizontalAlignment="Center" >
+                <StackPanel Margin="10">
+                    <TextBlock Text="عدد الفواتير الصحيحة" />
+                    <TextBox Text="{Binding CorrectInvoicesCount}"
+             Width="150" 
+             IsReadOnly="True"
+             HorizontalContentAlignment="Center"
+             FontWeight="Bold"
+             Background="#FAFAFA"/>
+                </StackPanel>
+
+                <StackPanel Margin="10">
+                    <TextBlock Text="عدد الفواتير المرتجع" />
+                    <TextBox Text="{Binding ReturnedInvoicesCount}"
+             Width="150" 
+             IsReadOnly="True"
+             HorizontalContentAlignment="Center"
+             Foreground="Red"
+             FontWeight="Bold"
+             Background="#FAFAFA"/>
+                </StackPanel>
+
+                <StackPanel Margin="10">
+                    <TextBlock Text="إجمالي المبيعات" />
+                    <TextBox Text="{Binding TotalSales ,StringFormat=N2}"
+                 Width="150" IsReadOnly="True"
+                 HorizontalContentAlignment="Right"
+                 Background="#FAFAFA"
+                             />
+                </StackPanel>
+
+                <StackPanel Margin="10">
+                    <TextBlock Text="إجمالي القيمة المضافة" />
+                    <TextBox Text="{Binding TotalVat,StringFormat=N2}"
+                 Width="150" IsReadOnly="True"
+                 HorizontalContentAlignment="Right"
+                 Background="#FAFAFA"/>
+                </StackPanel>
+
+                <StackPanel Margin="10">
+                    <TextBlock Text="إجمالي ضريبة الأرباح" />
+                    <TextBox Text="{Binding TotalProfitTax,StringFormat=N2}"
+                 Width="150" IsReadOnly="True"
+                 HorizontalContentAlignment="Right"
+                 Background="#FAFAFA"/>
+                </StackPanel>
+
+                <StackPanel Margin="10">
+                    <TextBlock Text="الصافي" />
+                    <TextBox Text="{Binding NetResult,StringFormat=N2}"
+                 Width="150" IsReadOnly="True"
+                 HorizontalContentAlignment="Right"
+                 Background="#FAFAFA"
+                 FontWeight="Bold"/>
+                </StackPanel>
+
+            </StackPanel>
+
+            <!-- DataGrid -->
+            <DataGrid ItemsSource="{Binding Invoices}"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      FontSize="16"
+                      CanUserAddRows="False"
+                      BorderBrush="#DDD">
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding DocumentStatusType}" Value="مرتجع">
+                                <Setter Property="Background" Value="#FFECECEC"/>
+                                <!-- رمادي خفيف -->
+                                <Setter Property="Foreground" Value="#D40000"/>
+                                <!-- أحمر فاتح -->
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.RowStyle>
+
+                <DataGrid.Columns>
+
+                    <DataGridTextColumn Header="الإجمالي" Binding="{Binding Total}" Width="*"/>
+                    <DataGridTextColumn Header="ض.ا.ت" Binding="{Binding TaxAmountT4}" Width="*"/>
+                    <DataGridTextColumn Header="ض.ق.م" Binding="{Binding TaxAmountT1}" Width="*"/>
+                    <DataGridTextColumn Header="الصافي" Binding="{Binding NetAmount}" Width="*"/>
+                    <DataGridTextColumn Header="الكميه" Binding="{Binding quantity}" Width="*"/>
+                    <DataGridTextColumn Header="الكود" Binding="{Binding InternalCode}" />
+                    <DataGridTextColumn Header="النوع" Binding="{Binding DocumentStatusType}" Width="*"/>
+                    <DataGridTextColumn Header="رقم الفاتورة" Binding="{Binding InternalId}" Width="*"/>
+                    <DataGridTextColumn Header="اسم العميل" Binding="{Binding CustomerName}" Width="*"/>
+                    <DataGridTextColumn Header="التاريخ" Binding="{Binding DateTimeReceived , StringFormat={}{0:yyyy/MM/dd}}" Width="*"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </DockPanel>
+    </Border>
+</Window>

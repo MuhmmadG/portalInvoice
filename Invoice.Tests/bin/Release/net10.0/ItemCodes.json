@@ -1,0 +1,283 @@
+[
+  {
+    "TaxCode": "6224011245012",
+    "InternalCode": "A100",
+    "Kind": "كرسبى"
+  },
+  {
+    "TaxCode": "6224011245029",
+    "InternalCode": "A121",
+    "Kind": "فاخر"
+  },
+  {
+    "TaxCode": "6224011245036",
+    "InternalCode": "A122",
+    "Kind": "فاخر"
+  },
+  {
+    "TaxCode": "6224011245043",
+    "InternalCode": "A123",
+    "Kind": "فاخر"
+  },
+  {
+    "TaxCode": "6224011245050",
+    "InternalCode": "A124",
+    "Kind": "فاخر"
+  },
+  {
+    "TaxCode": "6224011245067",
+    "InternalCode": "A125",
+    "Kind": "فاخر"
+  },
+  {
+    "TaxCode": "6224011245074",
+    "InternalCode": "A126",
+    "Kind": "فاخر"
+  },
+  {
+    "TaxCode": "6224011245081",
+    "InternalCode": "A127",
+    "Kind": "فاخر"
+  },
+  {
+    "TaxCode": "6224011245098",
+    "InternalCode": "A128",
+    "Kind": "فاخر"
+  },
+  {
+    "TaxCode": "6224011245104",
+    "InternalCode": "A135",
+    "Kind": "فاخر"
+  },
+  {
+    "TaxCode": "6224011245111",
+    "InternalCode": "A140",
+    "Kind": "فاخر"
+  },
+  {
+    "TaxCode": "6224011245128",
+    "InternalCode": "A150",
+    "Kind": "فاخر"
+  },
+  {
+    "TaxCode": "6224011245135",
+    "InternalCode": "B90",
+    "Kind": "تنجيد"
+  },
+  {
+    "TaxCode": "6224011245142",
+    "InternalCode": "B200",
+    "Kind": "تنجيد"
+  },
+  {
+    "TaxCode": "6224011245159",
+    "InternalCode": "B210",
+    "Kind": "تنجيد"
+  },
+  {
+    "TaxCode": "6224011245166",
+    "InternalCode": "B220",
+    "Kind": "تنجيد"
+  },
+  {
+    "TaxCode": "6224011245173",
+    "InternalCode": "B230",
+    "Kind": "تنجيد"
+  },
+  {
+    "TaxCode": "6224011245180",
+    "InternalCode": "B240",
+    "Kind": "تنجيد"
+  },
+  {
+    "TaxCode": "6224011245197",
+    "InternalCode": "B241",
+    "Kind": "تنجيد"
+  },
+  {
+    "TaxCode": "6224011245203",
+    "InternalCode": "B245",
+    "Kind": "تنجيد"
+  },
+  {
+    "TaxCode": "6224011245210",
+    "InternalCode": "B248",
+    "Kind": "تنجيد"
+  },
+  {
+    "TaxCode": "6224011245227",
+    "InternalCode": "B249",
+    "Kind": "تنجيد"
+  },
+  {
+    "TaxCode": "6224011245234",
+    "InternalCode": "B270",
+    "Kind": "تنجيد"
+  },
+  {
+    "TaxCode": "6224011245241",
+    "InternalCode": "B260",
+    "Kind": "تنجيد"
+  },
+  {
+    "TaxCode": "6224011245258",
+    "InternalCode": "B270/1",
+    "Kind": "تنجيد"
+  },
+  {
+    "TaxCode": "6224011245265",
+    "InternalCode": "B271",
+    "Kind": "تنجيد"
+  },
+  {
+    "TaxCode": "6224011245272",
+    "InternalCode": "B280",
+    "Kind": "تنجيد"
+  },
+  {
+    "TaxCode": "6224011245289",
+    "InternalCode": "B281",
+    "Kind": "تنجيد"
+  },
+  {
+    "TaxCode": "6224011245296",
+    "InternalCode": "B285",
+    "Kind": "تنجيد"
+  },
+  {
+    "TaxCode": "6224011245302",
+    "InternalCode": "B290",
+    "Kind": "تنجيد"
+  },
+  {
+    "TaxCode": "6224011245319",
+    "InternalCode": "B100",
+    "Kind": "تنجيد"
+  },
+  {
+    "TaxCode": "6224011245326",
+    "InternalCode": "C200",
+    "Kind": "أرضيات"
+  },
+  {
+    "TaxCode": "6224011245333",
+    "InternalCode": "C300",
+    "Kind": "أرضيات"
+  },
+  {
+    "TaxCode": "6224011245340",
+    "InternalCode": "C310",
+    "Kind": "أرضيات"
+  },
+  {
+    "TaxCode": "6224011245357",
+    "InternalCode": "C400",
+    "Kind": "أرضيات"
+  },
+  {
+    "TaxCode": "6224011245364",
+    "InternalCode": "D100",
+    "Kind": "جلد ملابس ليكره ثقيل"
+  },
+  {
+    "TaxCode": "6224011245371",
+    "InternalCode": "D200",
+    "Kind": "جلد ملابس ليكره"
+  },
+  {
+    "TaxCode": "6224011245388",
+    "InternalCode": "S101",
+    "Kind": "جلد احذيه فيلم"
+  },
+  {
+    "TaxCode": "6224011245395",
+    "InternalCode": "S201",
+    "Kind": "جلد احذيه فيلم ثقيل"
+  },
+  {
+    "TaxCode": "6224011245401",
+    "InternalCode": "هوالك",
+    "Kind": "هوالك جلد"
+  },
+  {
+    "TaxCode": "6224011245418",
+    "InternalCode": "فرو 1",
+    "Kind": "فرو 1"
+  },
+  {
+    "TaxCode": "6224011245425",
+    "InternalCode": "فرو لوكس",
+    "Kind": "فرو لوكس"
+
+  },
+  {
+    "TaxCode": "6224011245432",
+    "InternalCode": "فرو ملابس",
+    "Kind": "فرو ملابس"
+  },
+  {
+    "TaxCode": "6224011245449",
+    "InternalCode": "فرو مكتكت",
+    "Kind": "فرو مكتكت"
+  },
+  {
+    "TaxCode": "6224011245456",
+    "InternalCode": "فرو 1110",
+    "Kind": "فرو 1110"
+  },
+  {
+    "TaxCode": "6224011245463",
+    "InternalCode": "فرو 2110",
+    "Kind": "فرو 2110"
+  },
+  {
+    "TaxCode": "6224011245470",
+    "InternalCode": "فرو ملابس",
+    "Kind": "فرو ملابس"
+  },
+  {
+    "taxcode": "6224011245487",
+    "InternalCode": "فرو ملابس",
+    "Kind": "فرو ملابس"
+  },
+  {
+    "TaxCode": "6224011245494",
+    "InternalCode": "فرو ملابس",
+    "Kind": "فرو ملابس"
+  },
+  {
+    "TaxCode": "6224011245500",
+    "InternalCode": "فرولامع",
+    "Kind": "فرولامع"
+  },
+  {
+    "TaxCode": "6224011245517",
+    "InternalCode": "فرو هوالك",
+    "Kind": "فرو هوالك"
+  },
+  {
+    "TaxCode": "6224011245531",
+    "InternalCode": "A129L",
+    "Kind": "فاخر"
+  },
+  {
+    "TaxCode": "6224011245579",
+    "InternalCode": "A125/P",
+    "Kind": "فاخر"
+  },
+  {
+    "TaxCode": "6224011245562",
+    "InternalCode": "A121/P",
+    "Kind": "فاخر"
+  },
+  {
+    "TaxCode": "6224011245630",
+    "InternalCode": "B603",
+    "Kind": "تنجيد"
+  },
+  {
+    "TaxCode": "6224011245555",
+    "InternalCode": "A102",
+    "Kind": "فاخر"
+  }
+]

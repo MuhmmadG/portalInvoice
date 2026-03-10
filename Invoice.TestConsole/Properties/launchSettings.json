@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Invoice.TestConsole": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

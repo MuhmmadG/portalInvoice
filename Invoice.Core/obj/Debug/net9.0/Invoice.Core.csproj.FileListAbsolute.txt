@@ -1,0 +1,24 @@
+C:\Users\Muhmmad Gamal\source\repos\InvoicePortal\Invoice.Core\bin\Debug\net9.0\Invoice.Core.deps.json
+C:\Users\Muhmmad Gamal\source\repos\InvoicePortal\Invoice.Core\bin\Debug\net9.0\Invoice.Core.dll
+C:\Users\Muhmmad Gamal\source\repos\InvoicePortal\Invoice.Core\bin\Debug\net9.0\Invoice.Core.pdb
+C:\Users\Muhmmad Gamal\source\repos\InvoicePortal\Invoice.Core\obj\Debug\net9.0\Invoice.Core.csproj.AssemblyReference.cache
+C:\Users\Muhmmad Gamal\source\repos\InvoicePortal\Invoice.Core\obj\Debug\net9.0\Invoice.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Muhmmad Gamal\source\repos\InvoicePortal\Invoice.Core\obj\Debug\net9.0\Invoice.Core.AssemblyInfoInputs.cache
+C:\Users\Muhmmad Gamal\source\repos\InvoicePortal\Invoice.Core\obj\Debug\net9.0\Invoice.Core.AssemblyInfo.cs
+C:\Users\Muhmmad Gamal\source\repos\InvoicePortal\Invoice.Core\obj\Debug\net9.0\Invoice.Core.csproj.CoreCompileInputs.cache
+C:\Users\Muhmmad Gamal\source\repos\InvoicePortal\Invoice.Core\obj\Debug\net9.0\Invoice.Core.dll
+C:\Users\Muhmmad Gamal\source\repos\InvoicePortal\Invoice.Core\obj\Debug\net9.0\refint\Invoice.Core.dll
+C:\Users\Muhmmad Gamal\source\repos\InvoicePortal\Invoice.Core\obj\Debug\net9.0\Invoice.Core.pdb
+C:\Users\Muhmmad Gamal\source\repos\InvoicePortal\Invoice.Core\obj\Debug\net9.0\ref\Invoice.Core.dll
+C:\InvoicePortal\Invoice.Core\bin\Debug\net9.0\Invoice.Core.deps.json
+C:\InvoicePortal\Invoice.Core\bin\Debug\net9.0\Invoice.Core.dll
+C:\InvoicePortal\Invoice.Core\bin\Debug\net9.0\Invoice.Core.pdb
+C:\InvoicePortal\Invoice.Core\obj\Debug\net9.0\Invoice.Core.csproj.AssemblyReference.cache
+C:\InvoicePortal\Invoice.Core\obj\Debug\net9.0\Invoice.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\InvoicePortal\Invoice.Core\obj\Debug\net9.0\Invoice.Core.AssemblyInfoInputs.cache
+C:\InvoicePortal\Invoice.Core\obj\Debug\net9.0\Invoice.Core.AssemblyInfo.cs
+C:\InvoicePortal\Invoice.Core\obj\Debug\net9.0\Invoice.Core.csproj.CoreCompileInputs.cache
+C:\InvoicePortal\Invoice.Core\obj\Debug\net9.0\Invoice.Core.dll
+C:\InvoicePortal\Invoice.Core\obj\Debug\net9.0\refint\Invoice.Core.dll
+C:\InvoicePortal\Invoice.Core\obj\Debug\net9.0\Invoice.Core.pdb
+C:\InvoicePortal\Invoice.Core\obj\Debug\net9.0\ref\Invoice.Core.dll

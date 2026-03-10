@@ -1,0 +1,40 @@
+﻿using Invoice.Core.Model;
+using Invoice.UI.ViewModels;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+namespace Invoice.UI.Views
+{
+    /// <summary>
+    /// Interaction logic for CustomerDashboardView.xaml
+    /// </summary>
+    public partial class CustomerDashboardView : Window
+    {
+        public CustomerDashboardView(List<CustomerReportDto> reports)
+        {
+            InitializeComponent();
+
+            // إنشاء ViewModel وتمرير البيانات
+            this.DataContext = new CustomerDashboardViewModel(reports);
+        }
+       
+
+    }
+
+
+
+
+
+
+}

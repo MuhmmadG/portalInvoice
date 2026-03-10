@@ -1,0 +1,103 @@
+﻿<Window x:Class="Invoice.UI.Views.SupplierBalancesView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="أرصدة الموردين"
+        Height="500"
+        Width="900"
+        FlowDirection="RightToLeft"
+        Background="#F5F6FA">
+
+    <Grid Margin="15">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- العنوان -->
+        <Border Background="#34495E"
+                Padding="10"
+                CornerRadius="8"
+                Margin="0,0,0,10">
+
+            <TextBlock Text="📦 تقرير أرصدة الموردين"
+                       FontSize="20"
+                       Foreground="White"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"/>
+        </Border>
+
+        <!-- الجدول -->
+
+        <DataGrid Grid.Row="1"
+                  ItemsSource="{Binding Balances}"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  AlternatingRowBackground="#F2F2F2"
+                  RowHeight="35"
+                  FontSize="14">
+
+            <!-- تنسيق رأس الأعمدة -->
+
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="FontSize" Value="15"/>
+                    <Setter Property="Background" Value="#2C3E50"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+
+
+            <!-- تمييز صف الإجمالي -->
+
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+
+                    <Style.Triggers>
+
+                        <DataTrigger Binding="{Binding SupplierName}"
+                                     Value="--- الإجمالي العام للموردين ---">
+
+                            <Setter Property="Background" Value="#FFF3CD"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="FontSize" Value="15"/>
+
+                        </DataTrigger>
+
+                    </Style.Triggers>
+
+                </Style>
+            </DataGrid.RowStyle>
+
+
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="اسم المورد"
+                                    Binding="{Binding SupplierName}"
+                                    Width="2*"/>
+
+                <DataGridTextColumn Header="إجمالي مدين"
+                                    Binding="{Binding TotalDebit,StringFormat=N2}"
+                                    Width="*"/>
+
+                <DataGridTextColumn Header="إجمالي دائن"
+                                    Binding="{Binding TotalCredit,StringFormat=N2}"
+                                    Width="*"/>
+
+                <DataGridTextColumn Header="الرصيد"
+                                    Binding="{Binding NetBalance,StringFormat=N2}"
+                                    Width="*"/>
+
+                <DataGridTextColumn Header="الحالة"
+                                    Binding="{Binding BalanceStatus}"
+                                    Width="*"/>
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+    </Grid>
+
+</Window>
