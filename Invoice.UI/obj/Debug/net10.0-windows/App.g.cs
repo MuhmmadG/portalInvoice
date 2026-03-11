@@ -46,7 +46,7 @@ namespace Invoice.UI {
         /// </summary>
         [System.STAThreadAttribute()]
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "10.0.3.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "10.0.4.0")]
         public static void Main() {
             Invoice.UI.App app = new Invoice.UI.App();
             app.Run();

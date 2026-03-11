@@ -279,5 +279,10 @@
     "TaxCode": "6224011245555",
     "InternalCode": "A102",
     "Kind": "فاخر"
+  },
+  {
+    "TaxCode": "6224011245586",
+    "InternalCode": "A130",
+    "Kind": "فاخر"
   }
 ]

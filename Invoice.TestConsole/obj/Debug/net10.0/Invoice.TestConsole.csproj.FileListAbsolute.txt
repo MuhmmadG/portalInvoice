@@ -162,6 +162,7 @@ C:\InvoicePortal\Invoice.TestConsole\obj\Debug\net10.0\Invoice.TestConsole.Gener
 C:\InvoicePortal\Invoice.TestConsole\obj\Debug\net10.0\Invoice.TestConsole.AssemblyInfoInputs.cache
 C:\InvoicePortal\Invoice.TestConsole\obj\Debug\net10.0\Invoice.TestConsole.AssemblyInfo.cs
 C:\InvoicePortal\Invoice.TestConsole\obj\Debug\net10.0\Invoice.TestConsole.csproj.CoreCompileInputs.cache
+C:\InvoicePortal\Invoice.TestConsole\obj\Debug\net10.0\Invoice.TestConsole.sourcelink.json
 C:\InvoicePortal\Invoice.TestConsole\obj\Debug\net10.0\Invoice..CE312C71.Up2Date
 C:\InvoicePortal\Invoice.TestConsole\obj\Debug\net10.0\Invoice.TestConsole.dll
 C:\InvoicePortal\Invoice.TestConsole\obj\Debug\net10.0\refint\Invoice.TestConsole.dll

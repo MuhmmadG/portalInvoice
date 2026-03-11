@@ -1,3 +1,4 @@
+C:\InvoicePortal\Invoice.Data\bin\Debug\net10.0\Invoice.Data.dll
 C:\InvoicePortal\Invoice.Data\bin\Debug\net10.0\BuildHost-net472\Microsoft.Build.Locator.dll
 C:\InvoicePortal\Invoice.Data\bin\Debug\net10.0\BuildHost-net472\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.exe
 C:\InvoicePortal\Invoice.Data\bin\Debug\net10.0\BuildHost-net472\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.exe.config
@@ -48,7 +49,6 @@ C:\InvoicePortal\Invoice.Data\bin\Debug\net10.0\appsettings.json
 C:\InvoicePortal\Invoice.Data\bin\Debug\net10.0\ItemCodes.json
 C:\InvoicePortal\Invoice.Data\bin\Debug\net10.0\Invoice.Data.deps.json
 C:\InvoicePortal\Invoice.Data\bin\Debug\net10.0\Invoice.Data.runtimeconfig.json
-C:\InvoicePortal\Invoice.Data\bin\Debug\net10.0\Invoice.Data.dll
 C:\InvoicePortal\Invoice.Data\bin\Debug\net10.0\Invoice.Data.pdb
 C:\InvoicePortal\Invoice.Data\bin\Debug\net10.0\Invoice.Core.dll
 C:\InvoicePortal\Invoice.Data\bin\Debug\net10.0\Invoice.Core.pdb
@@ -57,6 +57,7 @@ C:\InvoicePortal\Invoice.Data\obj\Debug\net10.0\Invoice.Data.GeneratedMSBuildEdi
 C:\InvoicePortal\Invoice.Data\obj\Debug\net10.0\Invoice.Data.AssemblyInfoInputs.cache
 C:\InvoicePortal\Invoice.Data\obj\Debug\net10.0\Invoice.Data.AssemblyInfo.cs
 C:\InvoicePortal\Invoice.Data\obj\Debug\net10.0\Invoice.Data.csproj.CoreCompileInputs.cache
+C:\InvoicePortal\Invoice.Data\obj\Debug\net10.0\Invoice.Data.sourcelink.json
 C:\InvoicePortal\Invoice.Data\obj\Debug\net10.0\Invoice..864A5CBF.Up2Date
 C:\InvoicePortal\Invoice.Data\obj\Debug\net10.0\Invoice.Data.dll
 C:\InvoicePortal\Invoice.Data\obj\Debug\net10.0\refint\Invoice.Data.dll

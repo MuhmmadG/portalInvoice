@@ -2,18 +2,17 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:oxy="http://oxyplot.org/wpf"
-        WindowStartupLocation="CenterScreen"
-         ResizeMode="CanResize"
-        WindowStyle="SingleBorderWindow"
-        WindowState="Normal"
         Title="Dashboard"
         Width="1400"
-        Height="950"
+        Height="900"
+        WindowStartupLocation="CenterScreen"
         Background="#F2F2F7">
+
     <Grid Margin="20">
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <!-- KPIs -->
+            <!-- KPI -->
             <RowDefinition Height="Auto"/>
             <!-- Filters -->
             <RowDefinition Height="*"/>
@@ -21,126 +20,197 @@
         </Grid.RowDefinitions>
 
         <!-- ================= KPI CARDS ================= -->
-        <!-- ================= KPI CARDS ================= -->
-        <StackPanel Orientation="Horizontal"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Margin="0 30 0 30"
-            >
-            <!-- كرت 1 -->
-            <Border Background="White" CornerRadius="12" Padding="20"
-            Width="250" Height="120" Margin="10"
-            BorderBrush="#DDD" BorderThickness="1">
+
+        <UniformGrid Grid.Row="0"
+                     Columns="3"
+                     Margin="0 0 0 20">
+
+            <!-- Total Sales -->
+            <Border Background="White"
+                    CornerRadius="10"
+                    Padding="20"
+                    Margin="10"
+                    BorderBrush="#DDD"
+                    BorderThickness="1">
+
                 <StackPanel>
-                    <TextBlock Text="إجمالي المبيعات" FontWeight="Bold" FontSize="16"/>
+                    <TextBlock Text="إجمالي المبيعات"
+                               FontWeight="Bold"
+                               FontSize="16"/>
+
                     <TextBlock Text="{Binding TotalSalesKPI}"
-                       FontSize="22" Foreground="#3B82F6" FontWeight="Bold"/>
+                               FontSize="26"
+                               FontWeight="Bold"
+                               Foreground="#3B82F6"/>
                 </StackPanel>
             </Border>
 
-            <!-- كرت 2 -->
-            <Border Background="White" CornerRadius="12" Padding="20"
-            Width="250" Height="120" Margin="10"
-            BorderBrush="#DDD" BorderThickness="1">
+            <!-- Best Item -->
+            <Border Background="White"
+                    CornerRadius="10"
+                    Padding="20"
+                    Margin="10"
+                    BorderBrush="#DDD"
+                    BorderThickness="1">
+
                 <StackPanel>
-                    <TextBlock Text="أعلى صنف مبيعاً" FontWeight="Bold" FontSize="16"/>
+                    <TextBlock Text="أعلى صنف مبيعاً"
+                               FontWeight="Bold"
+                               FontSize="16"/>
+
                     <TextBlock Text="{Binding BestItemKPI}"
-                       FontSize="22" Foreground="#10B981" FontWeight="Bold"/>
+                               FontSize="26"
+                               FontWeight="Bold"
+                               Foreground="#10B981"/>
                 </StackPanel>
             </Border>
 
-            <!-- كرت 3 -->
-            <Border Background="White" CornerRadius="12" Padding="20"
-            Width="250" Height="120" Margin="10"
-            BorderBrush="#DDD" BorderThickness="1">
+            <!-- Total Quantity -->
+            <Border Background="White"
+                    CornerRadius="10"
+                    Padding="20"
+                    Margin="10"
+                    BorderBrush="#DDD"
+                    BorderThickness="1">
+
                 <StackPanel>
-                    <TextBlock Text="إجمالي الكميات" FontWeight="Bold" FontSize="16"/>
+                    <TextBlock Text="إجمالي الكميات"
+                               FontWeight="Bold"
+                               FontSize="16"/>
+
                     <TextBlock Text="{Binding TotalQuantityKPI}"
-                       FontSize="22" Foreground="#EF4444" FontWeight="Bold"/>
+                               FontSize="26"
+                               FontWeight="Bold"
+                               Foreground="#EF4444"/>
                 </StackPanel>
             </Border>
 
-        </StackPanel>
-
+        </UniformGrid>
 
         <!-- ================= FILTERS ================= -->
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1" Margin="0 0 0 20">
-            <ComboBox Width="180"
-              ItemsSource="{Binding AvailableItems}"
-              SelectedItem="{Binding SelectedItem}"
-              IsEditable="True"
-              Text="اختر الصنف"
-              Margin="0,0,15,0"/>
-            <ComboBox Width="180"
-              ItemsSource="{Binding AvailableYears}"
-              SelectedItem="{Binding SelectedYear}"
-              IsEditable="True"
-              Text="اختر السنة"/>
+
+        <StackPanel Grid.Row="1"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Margin="0 0 0 20">
+
+            <ComboBox Width="200"
+                      Margin="10"
+                      ItemsSource="{Binding AvailableItems}"
+                      SelectedItem="{Binding SelectedItem}"
+                      IsEditable="True"
+                      Text="اختر الصنف"/>
+
+            <ComboBox Width="200"
+                      Margin="10"
+                      ItemsSource="{Binding AvailableYears}"
+                      SelectedItem="{Binding SelectedYear}"
+                      IsEditable="True"
+                      Text="اختر السنة"/>
+
         </StackPanel>
 
 
         <!-- ================= CHARTS ================= -->
-        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
 
-            <StackPanel>
+        <Grid Grid.Row="2">
 
-                <!-- PRICE TREND (Quarter) -->
-                <Border Background="White" CornerRadius="12" Padding="20" Margin="0 0 0 30">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="350"/>
-                        </Grid.RowDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-                        <TextBlock Text="⏳ (تطور أسعار الصنف (التحليل الربع سنوي"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   Margin="0 0 0 10"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-                        <oxy:PlotView Grid.Row="1"
-                                      Model="{Binding PriceTrendModel}"/>
-                    </Grid>
-                </Border>
+            <!-- PRICE TREND -->
 
-                <!-- TOP 5 ITEMS BAR CHART -->
-                <Border Background="White" CornerRadius="12" Padding="20" Margin="0 0 0 30">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="350"/>
-                        </Grid.RowDefinitions>
+            <Border Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="10"
+                    Padding="20"
+                    Background="White"
+                    CornerRadius="10">
 
-                        <TextBlock Text="📦 أعلى  أصناف من حيث الكمية"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   Margin="0 0 0 10"/>
+                <Grid>
 
-                        <oxy:PlotView Grid.Row="1"
-                                      Model="{Binding TopItemsModel}"/>
-                    </Grid>
-                </Border>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
 
-                <!-- PIE CHART - SHARE -->
-                <Border Background="White" CornerRadius="12" Padding="20" Margin="0 0 0 30">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="350"/>
-                        </Grid.RowDefinitions>
+                    <TextBlock Text="تطور الأسعار"
+                               FontSize="18"
+                               FontWeight="Bold"
+                               Margin="0 0 0 10"/>
 
-                        <TextBlock Text="🍰 توزيع المبيعات حسب الأصناف"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   Margin="0 0 0 10"
-                                   HorizontalAlignment="Center"/>
+                    <oxy:PlotView Grid.Row="1"
+                                  Model="{Binding PriceTrendModel}"/>
 
-                        <oxy:PlotView Grid.Row="1"
-                                      Model="{Binding ItemsPieModel}"/>
-                    </Grid>
-                </Border>
+                </Grid>
 
-            </StackPanel>
-        </ScrollViewer>
+            </Border>
+
+            <!-- QUANTITY TREND -->
+
+            <Border Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="10"
+                    Padding="20"
+                    Background="White"
+                    CornerRadius="10">
+
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="أعلى الأصناف من حيث الكمية"
+                               FontSize="18"
+                               FontWeight="Bold"
+                               Margin="0 0 0 10"/>
+
+                    <oxy:PlotView Grid.Row="1"
+                                  Model="{Binding QuantityTrendModel}"/>
+
+                </Grid>
+
+            </Border>
+
+            <!-- PIE CHART -->
+
+            <Border Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    Margin="10"
+                    Padding="20"
+                    Background="White"
+                    CornerRadius="10">
+
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="توزيع المبيعات حسب الأصناف"
+                               FontSize="18"
+                               FontWeight="Bold"
+                               Margin="0 0 0 10"
+                               HorizontalAlignment="Center"/>
+
+                    <oxy:PlotView Grid.Row="1"
+                                  Model="{Binding ItemsPieModel}"/>
+
+                </Grid>
+
+            </Border>
+
+        </Grid>
 
     </Grid>
 

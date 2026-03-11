@@ -4,7 +4,7 @@
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized"
         Background="#F5F6FA"
-        Title="نظام الفواتير - الرئيسية">
+        Title="نظام الفواتير - الرئيسية" Icon="C:\InvoicePortal\Invoice.UI\Resorces\report.ico">
     <Window.Resources>
         <Style x:Key="SideButton" TargetType="Button">
             <Setter Property="Background" Value="#4B5563"/>
