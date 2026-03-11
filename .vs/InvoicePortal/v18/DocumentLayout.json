@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\InvoicePortal\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0794021F-9B7E-4DE6-B5F2-A7AB9E5334F2}|Invoice.Data\\Invoice.Data.csproj|c:\\invoiceportal\\invoice.data\\configrations\\taxtotalconfigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0794021F-9B7E-4DE6-B5F2-A7AB9E5334F2}|Invoice.Data\\Invoice.Data.csproj|solutionrelative:invoice.data\\configrations\\taxtotalconfigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0794021F-9B7E-4DE6-B5F2-A7AB9E5334F2}|Invoice.Data\\Invoice.Data.csproj|c:\\invoiceportal\\invoice.data\\migrations\\20251014141146_addotherexpenserelationtofinancialtransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0794021F-9B7E-4DE6-B5F2-A7AB9E5334F2}|Invoice.Data\\Invoice.Data.csproj|solutionrelative:invoice.data\\migrations\\20251014141146_addotherexpenserelationtofinancialtransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0794021F-9B7E-4DE6-B5F2-A7AB9E5334F2}|Invoice.Data\\Invoice.Data.csproj|c:\\invoiceportal\\invoice.data\\migrations\\20260311131145_addaccountrelations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0794021F-9B7E-4DE6-B5F2-A7AB9E5334F2}|Invoice.Data\\Invoice.Data.csproj|solutionrelative:invoice.data\\migrations\\20260311131145_addaccountrelations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0794021F-9B7E-4DE6-B5F2-A7AB9E5334F2}|Invoice.Data\\Invoice.Data.csproj|c:\\invoiceportal\\invoice.data\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0794021F-9B7E-4DE6-B5F2-A7AB9E5334F2}|Invoice.Data\\Invoice.Data.csproj|solutionrelative:invoice.data\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0794021F-9B7E-4DE6-B5F2-A7AB9E5334F2}|Invoice.Data\\Invoice.Data.csproj|c:\\invoiceportal\\invoice.data\\configrations\\financialtransactionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0794021F-9B7E-4DE6-B5F2-A7AB9E5334F2}|Invoice.Data\\Invoice.Data.csproj|solutionrelative:invoice.data\\configrations\\financialtransactionconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9193B16E-09B2-4198-BB1E-8111BAE0FD0E}|Invoice.Core\\Invoice.Core.csproj|c:\\invoiceportal\\invoice.core\\model\\documentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9193B16E-09B2-4198-BB1E-8111BAE0FD0E}|Invoice.Core\\Invoice.Core.csproj|solutionrelative:invoice.core\\model\\documentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0794021F-9B7E-4DE6-B5F2-A7AB9E5334F2}|Invoice.Data\\Invoice.Data.csproj|c:\\invoiceportal\\invoice.data\\configrations\\chartofaccountconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0794021F-9B7E-4DE6-B5F2-A7AB9E5334F2}|Invoice.Data\\Invoice.Data.csproj|solutionrelative:invoice.data\\configrations\\chartofaccountconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9193B16E-09B2-4198-BB1E-8111BAE0FD0E}|Invoice.Core\\Invoice.Core.csproj|c:\\invoiceportal\\invoice.core\\model\\documentmodeldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9193B16E-09B2-4198-BB1E-8111BAE0FD0E}|Invoice.Core\\Invoice.Core.csproj|solutionrelative:invoice.core\\model\\documentmodeldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{823A5D6E-2E5A-47A0-86A7-C3382CE4C134}|Invoice.UI\\Invoice.UI.csproj|c:\\invoiceportal\\invoice.ui\\viewmodels\\customerdashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{823A5D6E-2E5A-47A0-86A7-C3382CE4C134}|Invoice.UI\\Invoice.UI.csproj|solutionrelative:invoice.ui\\viewmodels\\customerdashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -103,10 +135,6 @@
       "RelativeMoniker": "D:0:0:{823A5D6E-2E5A-47A0-86A7-C3382CE4C134}|Invoice.UI\\Invoice.UI.csproj|solutionrelative:invoice.ui\\viewmodels\\supplierbalancesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0794021F-9B7E-4DE6-B5F2-A7AB9E5334F2}|Invoice.Data\\Invoice.Data.csproj|c:\\invoiceportal\\invoice.data\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0794021F-9B7E-4DE6-B5F2-A7AB9E5334F2}|Invoice.Data\\Invoice.Data.csproj|solutionrelative:invoice.data\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9193B16E-09B2-4198-BB1E-8111BAE0FD0E}|Invoice.Core\\Invoice.Core.csproj|c:\\invoiceportal\\invoice.core\\model\\supplierbalanceview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9193B16E-09B2-4198-BB1E-8111BAE0FD0E}|Invoice.Core\\Invoice.Core.csproj|solutionrelative:invoice.core\\model\\supplierbalanceview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -189,7 +217,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 280,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -221,128 +249,223 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20260311131145_AddAccountRelations.cs",
+              "DocumentMoniker": "C:\\InvoicePortal\\Invoice.Data\\Migrations\\20260311131145_AddAccountRelations.cs",
+              "RelativeDocumentMoniker": "Invoice.Data\\Migrations\\20260311131145_AddAccountRelations.cs",
+              "ToolTip": "C:\\InvoicePortal\\Invoice.Data\\Migrations\\20260311131145_AddAccountRelations.cs",
+              "RelativeToolTip": "Invoice.Data\\Migrations\\20260311131145_AddAccountRelations.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T13:13:09.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20251014141146_AddOtherExpenseRelationToFinancialTransaction.cs",
+              "DocumentMoniker": "C:\\InvoicePortal\\Invoice.Data\\Migrations\\20251014141146_AddOtherExpenseRelationToFinancialTransaction.cs",
+              "RelativeDocumentMoniker": "Invoice.Data\\Migrations\\20251014141146_AddOtherExpenseRelationToFinancialTransaction.cs",
+              "ToolTip": "C:\\InvoicePortal\\Invoice.Data\\Migrations\\20251014141146_AddOtherExpenseRelationToFinancialTransaction.cs",
+              "RelativeToolTip": "Invoice.Data\\Migrations\\20251014141146_AddOtherExpenseRelationToFinancialTransaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T13:12:42.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "TaxTotalConfigration.cs",
+              "DocumentMoniker": "C:\\InvoicePortal\\Invoice.Data\\Configrations\\TaxTotalConfigration.cs",
+              "RelativeDocumentMoniker": "Invoice.Data\\Configrations\\TaxTotalConfigration.cs",
+              "ToolTip": "C:\\InvoicePortal\\Invoice.Data\\Configrations\\TaxTotalConfigration.cs",
+              "RelativeToolTip": "Invoice.Data\\Configrations\\TaxTotalConfigration.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAgwCcAAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T12:55:49.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FinancialTransactionConfiguration.cs",
+              "DocumentMoniker": "C:\\InvoicePortal\\Invoice.Data\\Configrations\\FinancialTransactionConfiguration.cs",
+              "RelativeDocumentMoniker": "Invoice.Data\\Configrations\\FinancialTransactionConfiguration.cs",
+              "ToolTip": "C:\\InvoicePortal\\Invoice.Data\\Configrations\\FinancialTransactionConfiguration.cs",
+              "RelativeToolTip": "Invoice.Data\\Configrations\\FinancialTransactionConfiguration.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAswFgAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T12:54:29.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DocumentModel.cs",
+              "DocumentMoniker": "C:\\InvoicePortal\\Invoice.Core\\Model\\DocumentModel.cs",
+              "RelativeDocumentMoniker": "Invoice.Core\\Model\\DocumentModel.cs",
+              "ToolTip": "C:\\InvoicePortal\\Invoice.Core\\Model\\DocumentModel.cs",
+              "RelativeToolTip": "Invoice.Core\\Model\\DocumentModel.cs",
+              "ViewState": "AgIAAOoAAAAAAAAAAAAAAOwAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T12:23:09.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\InvoicePortal\\Invoice.Data\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Invoice.Data\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\InvoicePortal\\Invoice.Data\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Invoice.Data\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-30T12:39:43.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ChartOfAccountConfiguration.cs",
+              "DocumentMoniker": "C:\\InvoicePortal\\Invoice.Data\\Configrations\\ChartOfAccountConfiguration.cs",
+              "RelativeDocumentMoniker": "Invoice.Data\\Configrations\\ChartOfAccountConfiguration.cs",
+              "ToolTip": "C:\\InvoicePortal\\Invoice.Data\\Configrations\\ChartOfAccountConfiguration.cs",
+              "RelativeToolTip": "Invoice.Data\\Configrations\\ChartOfAccountConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T12:46:19.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DocumentModelDto.cs",
+              "DocumentMoniker": "C:\\InvoicePortal\\Invoice.Core\\Model\\DocumentModelDto.cs",
+              "RelativeDocumentMoniker": "Invoice.Core\\Model\\DocumentModelDto.cs",
+              "ToolTip": "C:\\InvoicePortal\\Invoice.Core\\Model\\DocumentModelDto.cs",
+              "RelativeToolTip": "Invoice.Core\\Model\\DocumentModelDto.cs",
+              "ViewState": "AgIAALsAAAAAAAAAAAAIwBEBAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T12:22:14.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "CustomerDashboardViewModel.cs",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\ViewModels\\CustomerDashboardViewModel.cs",
               "RelativeDocumentMoniker": "Invoice.UI\\ViewModels\\CustomerDashboardViewModel.cs",
               "ToolTip": "C:\\InvoicePortal\\Invoice.UI\\ViewModels\\CustomerDashboardViewModel.cs",
               "RelativeToolTip": "Invoice.UI\\ViewModels\\CustomerDashboardViewModel.cs",
-              "ViewState": "AgIAAAQBAAAAAAAAAAAAAA4BAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAPkAAAAAAAAAAAAgwAwBAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-28T15:23:21.243Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "CustomerDashboardView.xaml",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\Views\\CustomerDashboardView.xaml",
               "RelativeDocumentMoniker": "Invoice.UI\\Views\\CustomerDashboardView.xaml",
               "ToolTip": "C:\\InvoicePortal\\Invoice.UI\\Views\\CustomerDashboardView.xaml",
               "RelativeToolTip": "Invoice.UI\\Views\\CustomerDashboardView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-22T13:36:48.111Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-22T13:36:48.111Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "CustomerJournalView.xaml",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\Views\\CustomerJournalView.xaml",
               "RelativeDocumentMoniker": "Invoice.UI\\Views\\CustomerJournalView.xaml",
               "ToolTip": "C:\\InvoicePortal\\Invoice.UI\\Views\\CustomerJournalView.xaml",
               "RelativeToolTip": "Invoice.UI\\Views\\CustomerJournalView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-11T09:43:15.301Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-11T09:43:15.301Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "CustomerReportWindow.xaml",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\Views\\CustomerReportWindow.xaml",
               "RelativeDocumentMoniker": "Invoice.UI\\Views\\CustomerReportWindow.xaml",
               "ToolTip": "C:\\InvoicePortal\\Invoice.UI\\Views\\CustomerReportWindow.xaml",
               "RelativeToolTip": "Invoice.UI\\Views\\CustomerReportWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-11T09:43:12.88Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-11T09:43:12.88Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "CustomerInvoicesView.xaml",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\Views\\CustomerInvoicesView.xaml",
               "RelativeDocumentMoniker": "Invoice.UI\\Views\\CustomerInvoicesView.xaml",
               "ToolTip": "C:\\InvoicePortal\\Invoice.UI\\Views\\CustomerInvoicesView.xaml",
               "RelativeToolTip": "Invoice.UI\\Views\\CustomerInvoicesView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-11T09:43:17.474Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-11T09:43:17.474Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "FinancialJournalView.xaml",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\Views\\FinancialJournalView.xaml",
               "RelativeDocumentMoniker": "Invoice.UI\\Views\\FinancialJournalView.xaml",
               "ToolTip": "C:\\InvoicePortal\\Invoice.UI\\Views\\FinancialJournalView.xaml",
               "RelativeToolTip": "Invoice.UI\\Views\\FinancialJournalView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-03T14:16:25.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T14:16:25.013Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "FinancialTransactionView.xaml",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\Views\\FinancialTransactionView.xaml",
               "RelativeDocumentMoniker": "Invoice.UI\\Views\\FinancialTransactionView.xaml",
               "ToolTip": "C:\\InvoicePortal\\Invoice.UI\\Views\\FinancialTransactionView.xaml",
               "RelativeToolTip": "Invoice.UI\\Views\\FinancialTransactionView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-03T13:58:21.215Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T13:58:21.215Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "ProductReportWindow.xaml",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\Views\\ProductReportWindow.xaml",
               "RelativeDocumentMoniker": "Invoice.UI\\Views\\ProductReportWindow.xaml",
               "ToolTip": "C:\\InvoicePortal\\Invoice.UI\\Views\\ProductReportWindow.xaml",
               "RelativeToolTip": "Invoice.UI\\Views\\ProductReportWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-11T10:00:56.395Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-11T10:00:56.395Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "ExternalPurchaseReportView.xaml",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\Views\\ExternalPurchaseReportView.xaml",
               "RelativeDocumentMoniker": "Invoice.UI\\Views\\ExternalPurchaseReportView.xaml",
               "ToolTip": "C:\\InvoicePortal\\Invoice.UI\\Views\\ExternalPurchaseReportView.xaml",
               "RelativeToolTip": "Invoice.UI\\Views\\ExternalPurchaseReportView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-11T10:00:47.741Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-11T10:00:47.741Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 18,
               "Title": "ExpenseAnalysisView.xaml",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\Views\\ExpenseAnalysisView.xaml",
               "RelativeDocumentMoniker": "Invoice.UI\\Views\\ExpenseAnalysisView.xaml",
               "ToolTip": "C:\\InvoicePortal\\Invoice.UI\\Views\\ExpenseAnalysisView.xaml",
               "RelativeToolTip": "Invoice.UI\\Views\\ExpenseAnalysisView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-11T09:42:21.205Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-11T09:42:21.205Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 19,
               "Title": "ItemCodes.json",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.Data\\ItemCodes.json",
               "RelativeDocumentMoniker": "Invoice.Data\\ItemCodes.json",
@@ -350,60 +473,55 @@
               "RelativeToolTip": "Invoice.Data\\ItemCodes.json",
               "ViewState": "AgIAANQAAAAAAAAAAAAhwNwAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-11T09:48:32.661Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-11T09:48:32.661Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 24,
               "Title": "SupplierJournalView.xaml",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\Views\\SupplierJournalView.xaml",
               "RelativeDocumentMoniker": "Invoice.UI\\Views\\SupplierJournalView.xaml",
               "ToolTip": "C:\\InvoicePortal\\Invoice.UI\\Views\\SupplierJournalView.xaml",
               "RelativeToolTip": "Invoice.UI\\Views\\SupplierJournalView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-09T13:39:12.507Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-09T13:39:12.507Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "ExternalExpenseView.xaml",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\Views\\ExternalExpenseView.xaml",
               "RelativeDocumentMoniker": "Invoice.UI\\Views\\ExternalExpenseView.xaml",
               "ToolTip": "C:\\InvoicePortal\\Invoice.UI\\Views\\ExternalExpenseView.xaml",
               "RelativeToolTip": "Invoice.UI\\Views\\ExternalExpenseView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-11T09:42:29.442Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-11T09:42:29.442Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 21,
               "Title": "PurshaseView.xaml",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\Views\\PurshaseView.xaml",
               "RelativeDocumentMoniker": "Invoice.UI\\Views\\PurshaseView.xaml",
               "ToolTip": "C:\\InvoicePortal\\Invoice.UI\\Views\\PurshaseView.xaml",
               "RelativeToolTip": "Invoice.UI\\Views\\PurshaseView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-21T14:43:57.119Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-21T14:43:57.119Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 22,
               "Title": "SupplierBalancesView.xaml",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\Views\\SupplierBalancesView.xaml",
               "RelativeDocumentMoniker": "Invoice.UI\\Views\\SupplierBalancesView.xaml",
               "ToolTip": "C:\\InvoicePortal\\Invoice.UI\\Views\\SupplierBalancesView.xaml",
               "RelativeToolTip": "Invoice.UI\\Views\\SupplierBalancesView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-10T13:18:38.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-10T13:18:38.262Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 20,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.Data\\appsettings.json",
               "RelativeDocumentMoniker": "Invoice.Data\\appsettings.json",
@@ -411,36 +529,33 @@
               "RelativeToolTip": "Invoice.Data\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-30T12:40:45.623Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-30T12:40:45.623Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 23,
               "Title": "SupplierInvoicesView.xaml",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\Views\\SupplierInvoicesView.xaml",
               "RelativeDocumentMoniker": "Invoice.UI\\Views\\SupplierInvoicesView.xaml",
               "ToolTip": "C:\\InvoicePortal\\Invoice.UI\\Views\\SupplierInvoicesView.xaml",
               "RelativeToolTip": "Invoice.UI\\Views\\SupplierInvoicesView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-11T09:42:56.923Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-11T09:42:56.923Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 25,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Invoice.UI\\MainWindow.xaml",
               "ToolTip": "C:\\InvoicePortal\\Invoice.UI\\MainWindow.xaml",
               "RelativeToolTip": "Invoice.UI\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-03T13:58:14.977Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-03T13:58:14.977Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 26,
               "Title": "DashboardView.xaml.cs",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\Views\\DashboardView.xaml.cs",
               "RelativeDocumentMoniker": "Invoice.UI\\Views\\DashboardView.xaml.cs",
@@ -448,36 +563,33 @@
               "RelativeToolTip": "Invoice.UI\\Views\\DashboardView.xaml.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAiwJ0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T08:36:10.786Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-09T08:36:10.786Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 27,
               "Title": "DashboardView.xaml",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\Views\\DashboardView.xaml",
               "RelativeDocumentMoniker": "Invoice.UI\\Views\\DashboardView.xaml",
               "ToolTip": "C:\\InvoicePortal\\Invoice.UI\\Views\\DashboardView.xaml",
               "RelativeToolTip": "Invoice.UI\\Views\\DashboardView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-22T13:37:12.402Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-22T13:37:12.402Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 28,
               "Title": "Invoice.UI",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\Invoice.UI.csproj",
               "RelativeDocumentMoniker": "Invoice.UI\\Invoice.UI.csproj",
               "ToolTip": "C:\\InvoicePortal\\Invoice.UI\\Invoice.UI.csproj",
               "RelativeToolTip": "Invoice.UI\\Invoice.UI.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-11T09:21:53.356Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-11T09:21:53.356Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 29,
               "Title": "AppHost.cs",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\AppHost.cs",
               "RelativeDocumentMoniker": "Invoice.UI\\AppHost.cs",
@@ -489,7 +601,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 30,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\App.xaml.cs",
               "RelativeDocumentMoniker": "Invoice.UI\\App.xaml.cs",
@@ -501,7 +613,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 31,
               "Title": "SupplierBalancesView.xaml.cs",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\Views\\SupplierBalancesView.xaml.cs",
               "RelativeDocumentMoniker": "Invoice.UI\\Views\\SupplierBalancesView.xaml.cs",
@@ -513,7 +625,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 32,
               "Title": "SupplierBalancesViewModel.cs",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\ViewModels\\SupplierBalancesViewModel.cs",
               "RelativeDocumentMoniker": "Invoice.UI\\ViewModels\\SupplierBalancesViewModel.cs",
@@ -525,7 +637,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 33,
               "Title": "SupplierBalanceView.cs",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.Core\\Model\\SupplierBalanceView.cs",
               "RelativeDocumentMoniker": "Invoice.Core\\Model\\SupplierBalanceView.cs",
@@ -537,19 +649,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\InvoicePortal\\Invoice.Data\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Invoice.Data\\Data\\AppDbContext.cs",
-              "ToolTip": "C:\\InvoicePortal\\Invoice.Data\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "Invoice.Data\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAgwDoAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T12:39:43.138Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 34,
               "Title": "CustomerInvoicesView.xaml.cs",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\Views\\CustomerInvoicesView.xaml.cs",
               "RelativeDocumentMoniker": "Invoice.UI\\Views\\CustomerInvoicesView.xaml.cs",
@@ -561,7 +661,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 35,
               "Title": "CustomerBalancesView.xaml.cs",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\Views\\CustomerBalancesView.xaml.cs",
               "RelativeDocumentMoniker": "Invoice.UI\\Views\\CustomerBalancesView.xaml.cs",
@@ -573,7 +673,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 36,
               "Title": "CustomerBalanceView.cs",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.Core\\Model\\CustomerBalanceView.cs",
               "RelativeDocumentMoniker": "Invoice.Core\\Model\\CustomerBalanceView.cs",
@@ -585,7 +685,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 37,
               "Title": "SupplierJournalViewModel.cs",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\ViewModels\\SupplierJournalViewModel.cs",
               "RelativeDocumentMoniker": "Invoice.UI\\ViewModels\\SupplierJournalViewModel.cs",
@@ -597,7 +697,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 38,
               "Title": "FinancialJournalViewModel.cs",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\ViewModels\\FinancialJournalViewModel.cs",
               "RelativeDocumentMoniker": "Invoice.UI\\ViewModels\\FinancialJournalViewModel.cs",
@@ -609,7 +709,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 40,
               "Title": "OtherExpenseViewModel.cs",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\ViewModels\\OtherExpenseViewModel.cs",
               "RelativeDocumentMoniker": "Invoice.UI\\ViewModels\\OtherExpenseViewModel.cs",
@@ -621,7 +721,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 39,
               "Title": "OtherExpenseView.xaml",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\Views\\OtherExpenseView.xaml",
               "RelativeDocumentMoniker": "Invoice.UI\\Views\\OtherExpenseView.xaml",
@@ -632,7 +732,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 41,
               "Title": "AffectedCountModificationCommandBatch.cs",
               "DocumentMoniker": "C:\\Users\\Muhmmad Gamal\\AppData\\Local\\Temp\\.vsdbgsrc\\697c3a15c46bec6a3183f89e3c4b5dfc0c3ef4ea17147df7a99b74915b8b05dd\\AffectedCountModificationCommandBatch.cs",
               "RelativeDocumentMoniker": "..\\Users\\Muhmmad Gamal\\AppData\\Local\\Temp\\.vsdbgsrc\\697c3a15c46bec6a3183f89e3c4b5dfc0c3ef4ea17147df7a99b74915b8b05dd\\AffectedCountModificationCommandBatch.cs",
@@ -644,19 +744,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 42,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\App.xaml",
               "RelativeDocumentMoniker": "Invoice.UI\\App.xaml",
               "ToolTip": "C:\\InvoicePortal\\Invoice.UI\\App.xaml",
               "RelativeToolTip": "Invoice.UI\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-01T13:26:36.148Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-01T13:26:36.148Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 43,
               "Title": "InvoiceReaderFile.cs",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.Data\\Services\\InvoiceReaderFile.cs",
               "RelativeDocumentMoniker": "Invoice.Data\\Services\\InvoiceReaderFile.cs",
@@ -668,7 +767,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 44,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.Core\\Class1.cs",
               "RelativeDocumentMoniker": "Invoice.Core\\Class1.cs",
@@ -680,7 +779,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 46,
               "Title": ".filenesting.json",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.Data\\.filenesting.json",
               "RelativeDocumentMoniker": "Invoice.Data\\.filenesting.json",
@@ -692,7 +791,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 45,
               "Title": "AppConfiguration.cs",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.Data\\Data\\AppConfiguration.cs",
               "RelativeDocumentMoniker": "Invoice.Data\\Data\\AppConfiguration.cs",
@@ -704,7 +803,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 47,
               "Title": "NormalInvoiceSaveStrategySales.cs",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.Data\\RopositoriesStrategy\\NormalInvoiceSaveStrategySales.cs",
               "RelativeDocumentMoniker": "Invoice.Data\\RopositoriesStrategy\\NormalInvoiceSaveStrategySales.cs",
@@ -716,7 +815,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 48,
               "Title": "CreaditInvoiceStrategyOfPurshases.cs",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.Data\\RopositoriesStrategy\\CreaditInvoiceStrategyOfPurshases.cs",
               "RelativeDocumentMoniker": "Invoice.Data\\RopositoriesStrategy\\CreaditInvoiceStrategyOfPurshases.cs",
@@ -728,7 +827,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 50,
               "Title": "BaseInvoiceStrategyOfSales.cs",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.Data\\RopositoriesStrategy\\BaseInvoiceStrategyOfSales.cs",
               "RelativeDocumentMoniker": "Invoice.Data\\RopositoriesStrategy\\BaseInvoiceStrategyOfSales.cs",
@@ -740,7 +839,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 51,
               "Title": "PurchaseViewModel.cs",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.UI\\ViewModels\\PurchaseViewModel.cs",
               "RelativeDocumentMoniker": "Invoice.UI\\ViewModels\\PurchaseViewModel.cs",
@@ -752,7 +851,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 49,
               "Title": "DocumentMapper.cs",
               "DocumentMoniker": "C:\\InvoicePortal\\Invoice.Data\\RopositoriesStrategy\\DocumentMapper.cs",
               "RelativeDocumentMoniker": "Invoice.Data\\RopositoriesStrategy\\DocumentMapper.cs",

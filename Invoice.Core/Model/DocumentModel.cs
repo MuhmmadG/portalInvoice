@@ -9,6 +9,14 @@ using System.Xml.Serialization;
 
 namespace Invoice.Core.Model
 {
+    public enum AccountType
+    {
+        Asset,
+        Liability,
+        Equity,
+        Revenue,
+        Expense
+    }
     public enum TransactionType
     {
         Payment = 0,  // سداد
@@ -154,6 +162,10 @@ namespace Invoice.Core.Model
         public decimal Amount { get; set; }
         public int DocumentModelId { get; set; } // Foreign key for DocumentModel
         public DocumentModel DocumentModel { get; set; }
+
+
+        public int? AccountId { get; set; }
+        public ChartOfAccount Account { get; set; }
     }
     public class ExpenseCategory
     {
@@ -220,6 +232,10 @@ namespace Invoice.Core.Model
         public int? DocumentModelId { get; set; }
         public DocumentModel DocumentModel { get; set; }
 
+        // الحساب المحاسبي
+        public int? AccountId { get; set; }
+        public ChartOfAccount Account { get; set; }
+
         // 🏢 الطرف المالي (عميل أو مورد)
         public int? PartyId { get; set; }
         public Party Party { get; set; }
@@ -258,7 +274,35 @@ namespace Invoice.Core.Model
         public OtherExpense OtherExpense { get; set; }  // العلاقة
 
     }
+    public class ChartOfAccount
+    {
+        public int Id { get; set; }
 
+        public string CodeAccount { get; set; }
+
+        public string AccountName { get; set; }
+
+        public string FinancialStatement { get; set; }
+
+        public int Level { get; set; }
+
+        public AccountType AccountType { get; set; }
+
+        // 👇 الأب
+        public int? ParentAccountId { get; set; }
+
+        public ChartOfAccount ParentAccount { get; set; }
+
+        // 👇 الأبناء
+        public ICollection<ChartOfAccount> Children { get; set; }
+            = new List<ChartOfAccount>();
+
+        // 👇 الحركات المالية
+        public ICollection<FinancialTransaction> FinancialTransactions { get; set; }
+
+        // 👇 الضرائب
+        public ICollection<TaxTotal> TaxTotals { get; set; }
+    }
 
 
 }

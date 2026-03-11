@@ -43,6 +43,7 @@ namespace Invoice.Data.Data
             modelBuilder.ApplyConfiguration(new Configrations.ExternalExpenseConfiguration());
             modelBuilder.ApplyConfiguration(new Configrations.OtherExpenseConfiguration());
             modelBuilder.ApplyConfiguration(new Configrations.FinancialTransactionConfiguration());
+            modelBuilder.ApplyConfiguration(new Configrations.ChartOfAccountConfiguration());
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<CustomerBalanceView>(entity =>
@@ -73,6 +74,7 @@ namespace Invoice.Data.Data
         public DbSet<FinancialTransaction> FinancialTransactions { get; set; }
         public DbSet<CustomerBalanceView> CustomerBalances { get; set; }
         public DbSet<SupplierBalanceView> SupplierBalances { get; set; }
-    }
+        public DbSet<ChartOfAccount> ChartOfAccounts { get; set; }
+        }
         
 }

@@ -82,7 +82,12 @@ namespace Invoice.Data.Configrations
                 builder.HasIndex(t => t.Date).HasDatabaseName("IX_FinancialTransactions_Date");
                 builder.HasIndex(t => t.PartyId).HasDatabaseName("IX_FinancialTransactions_PartyId");
                 builder.HasIndex(t => t.DocumentModelId).HasDatabaseName("IX_FinancialTransactions_DocumentModelId");
-            }
+            // 1. إعداد علاقة الحساب المحاسبي الأساسي
+            builder.HasOne(t => t.Account)             // العملية لها حساب واحد
+                   .WithMany()                         // (أو .WithMany(a => a.Transactions) إذا كان لديك قائمة في الـ Account)
+                   .HasForeignKey(t => t.AccountId)    // مفتاح الربط
+                   .OnDelete(DeleteBehavior.Restrict); // منع الحذف العشوائي للحسابات المرتبطة بحركات
+        }
         }
     }
 

@@ -31,7 +31,13 @@ namespace Invoice.Data.Configrations
             builder.HasOne(t => t.DocumentModel)              // TaxTotal له فاتورة واحدة
                    .WithMany(d => d.TaxTotals)                // DocumentModel عنده كذا TaxTotal
                    .HasForeignKey(t => t.DocumentModelId)     // مفتاح الربط
-                   .OnDelete(DeleteBehavior.Cascade);         // عند حذف الفاتورة يحذف الـ TaxTotals
+                   .OnDelete(DeleteBehavior.Cascade);
+
+            // 1. إعداد علاقة الحساب المحاسبي الأساسي
+            builder.HasOne(t => t.Account)             // العملية لها حساب واحد
+                   .WithMany()                         // (أو .WithMany(a => a.Transactions) إذا كان لديك قائمة في الـ Account)
+                   .HasForeignKey(t => t.AccountId)    // مفتاح الربط
+                   .OnDelete(DeleteBehavior.Restrict); // منع الحذف العشوائي للحسابات المرتبطة بحركات
         }
     }
 }
