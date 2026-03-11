@@ -229,6 +229,7 @@ C:\InvoicePortal\Invoice.Tests\obj\Debug\net10.0\Invoice.Tests.GeneratedMSBuildE
 C:\InvoicePortal\Invoice.Tests\obj\Debug\net10.0\Invoice.Tests.AssemblyInfoInputs.cache
 C:\InvoicePortal\Invoice.Tests\obj\Debug\net10.0\Invoice.Tests.AssemblyInfo.cs
 C:\InvoicePortal\Invoice.Tests\obj\Debug\net10.0\Invoice.Tests.csproj.CoreCompileInputs.cache
+C:\InvoicePortal\Invoice.Tests\obj\Debug\net10.0\Invoice.Tests.sourcelink.json
 C:\InvoicePortal\Invoice.Tests\obj\Debug\net10.0\Invoice..99914F26.Up2Date
 C:\InvoicePortal\Invoice.Tests\obj\Debug\net10.0\Invoice.Tests.dll
 C:\InvoicePortal\Invoice.Tests\obj\Debug\net10.0\refint\Invoice.Tests.dll

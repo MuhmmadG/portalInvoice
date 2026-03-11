@@ -65,6 +65,72 @@ namespace Invoice.Data.Migrations
                     b.ToTable("Addresses", (string)null);
                 });
 
+            modelBuilder.Entity("Invoice.Core.Model.ChartOfAccount", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AccountName")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<int>("AccountType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CodeAccount")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("FinancialStatement")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ParentAccountId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CodeAccount")
+                        .IsUnique();
+
+                    b.HasIndex("ParentAccountId");
+
+                    b.ToTable("ChartOfAccounts", (string)null);
+                });
+
+            modelBuilder.Entity("Invoice.Core.Model.CustomerBalanceView", b =>
+                {
+                    b.Property<string>("BalanceStatus")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CustomerName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("NetBalance")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("TotalCredit")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("TotalDebit")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.ToTable((string)null);
+
+                    b.ToView("View_CustomerBalances", (string)null);
+                });
+
             modelBuilder.Entity("Invoice.Core.Model.DocumentModel", b =>
                 {
                     b.Property<int>("Id")
@@ -262,6 +328,9 @@ namespace Invoice.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("AccountId")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("Amount")
                         .HasColumnType("decimal(18,2)");
 
@@ -310,6 +379,8 @@ namespace Invoice.Data.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AccountId");
 
                     b.HasIndex("Date")
                         .HasDatabaseName("IX_FinancialTransactions_Date");
@@ -503,6 +574,30 @@ namespace Invoice.Data.Migrations
                     b.ToTable("Parties", (string)null);
                 });
 
+            modelBuilder.Entity("Invoice.Core.Model.SupplierBalanceView", b =>
+                {
+                    b.Property<string>("BalanceStatus")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("NetBalance")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("SupplierName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("TotalCredit")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("TotalDebit")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.ToTable((string)null);
+
+                    b.ToView("View_SupplierBalances", (string)null);
+                });
+
             modelBuilder.Entity("Invoice.Core.Model.TaxTotal", b =>
                 {
                     b.Property<int>("Id")
@@ -510,6 +605,9 @@ namespace Invoice.Data.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("AccountId")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("Amount")
                         .HasColumnType("decimal(18,2)");
@@ -523,6 +621,8 @@ namespace Invoice.Data.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AccountId");
 
                     b.HasIndex("DocumentModelId");
 
@@ -574,6 +674,16 @@ namespace Invoice.Data.Migrations
                     b.Navigation("Party");
                 });
 
+            modelBuilder.Entity("Invoice.Core.Model.ChartOfAccount", b =>
+                {
+                    b.HasOne("Invoice.Core.Model.ChartOfAccount", "ParentAccount")
+                        .WithMany("Children")
+                        .HasForeignKey("ParentAccountId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("ParentAccount");
+                });
+
             modelBuilder.Entity("Invoice.Core.Model.DocumentModel", b =>
                 {
                     b.HasOne("Invoice.Core.Model.ExpenseCategory", "ExpenseCategory")
@@ -607,6 +717,11 @@ namespace Invoice.Data.Migrations
 
             modelBuilder.Entity("Invoice.Core.Model.FinancialTransaction", b =>
                 {
+                    b.HasOne("Invoice.Core.Model.ChartOfAccount", "Account")
+                        .WithMany("FinancialTransactions")
+                        .HasForeignKey("AccountId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
                     b.HasOne("Invoice.Core.Model.DocumentModel", "DocumentModel")
                         .WithMany("FinancialTransactions")
                         .HasForeignKey("DocumentModelId")
@@ -620,6 +735,8 @@ namespace Invoice.Data.Migrations
                         .WithMany("FinancialTransactions")
                         .HasForeignKey("PartyId")
                         .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("Account");
 
                     b.Navigation("DocumentModel");
 
@@ -700,11 +817,18 @@ namespace Invoice.Data.Migrations
 
             modelBuilder.Entity("Invoice.Core.Model.TaxTotal", b =>
                 {
+                    b.HasOne("Invoice.Core.Model.ChartOfAccount", "Account")
+                        .WithMany("TaxTotals")
+                        .HasForeignKey("AccountId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
                     b.HasOne("Invoice.Core.Model.DocumentModel", "DocumentModel")
                         .WithMany("TaxTotals")
                         .HasForeignKey("DocumentModelId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Account");
 
                     b.Navigation("DocumentModel");
                 });
@@ -718,6 +842,15 @@ namespace Invoice.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("InvoiceLine");
+                });
+
+            modelBuilder.Entity("Invoice.Core.Model.ChartOfAccount", b =>
+                {
+                    b.Navigation("Children");
+
+                    b.Navigation("FinancialTransactions");
+
+                    b.Navigation("TaxTotals");
                 });
 
             modelBuilder.Entity("Invoice.Core.Model.DocumentModel", b =>

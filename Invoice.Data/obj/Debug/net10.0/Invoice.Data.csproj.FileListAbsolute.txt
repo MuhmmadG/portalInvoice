@@ -57,6 +57,7 @@ C:\InvoicePortal\Invoice.Data\obj\Debug\net10.0\Invoice.Data.GeneratedMSBuildEdi
 C:\InvoicePortal\Invoice.Data\obj\Debug\net10.0\Invoice.Data.AssemblyInfoInputs.cache
 C:\InvoicePortal\Invoice.Data\obj\Debug\net10.0\Invoice.Data.AssemblyInfo.cs
 C:\InvoicePortal\Invoice.Data\obj\Debug\net10.0\Invoice.Data.csproj.CoreCompileInputs.cache
+C:\InvoicePortal\Invoice.Data\obj\Debug\net10.0\Invoice.Data.sourcelink.json
 C:\InvoicePortal\Invoice.Data\obj\Debug\net10.0\Invoice..864A5CBF.Up2Date
 C:\InvoicePortal\Invoice.Data\obj\Debug\net10.0\Invoice.Data.dll
 C:\InvoicePortal\Invoice.Data\obj\Debug\net10.0\refint\Invoice.Data.dll

@@ -13,8 +13,8 @@ C:\InvoicePortal\Invoice.UI\App.xaml
 19-725424912
 1746678314
 52-2038733415
-307-603654466
+307912631486
 MainWindow.xaml;Views\CustomerBalancesView.xaml;Views\CustomerDashboardView.xaml;Views\CustomerInvoicesView.xaml;Views\CustomerJournalView.xaml;Views\CustomerReportWindow.xaml;Views\DashboardView.xaml;Views\ExpenseAnalysisView.xaml;Views\ExternalExpenseView.xaml;Views\ExternalPurchaseReportView.xaml;Views\FinancialJournalView.xaml;Views\FinancialTransactionView.xaml;Views\OtherExpenseView.xaml;Views\ProductReportWindow.xaml;Views\PurshaseView.xaml;Views\SupplierBalancesView.xaml;Views\SupplierInvoicesView.xaml;Views\SupplierJournalView.xaml;Views\TaxReportView.xaml;
 
-False
+True
 

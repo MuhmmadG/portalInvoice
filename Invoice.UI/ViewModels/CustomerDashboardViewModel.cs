@@ -17,7 +17,7 @@ namespace Invoice.UI.ViewModels
     {
         private readonly List<CustomerReportDto> _allReports;
 
-        // ==================== FILTER PROPERTIES ====================
+        // ==================== FILTERS ====================
 
         public ObservableCollection<string> AvailableItems { get; set; }
         public ObservableCollection<int> AvailableYears { get; set; }
@@ -44,7 +44,7 @@ namespace Invoice.UI.ViewModels
             set { _selectedMonth = value; OnFilterChanged(); }
         }
 
-        // ==================== KPI PROPERTIES ====================
+        // ==================== KPI ====================
 
         private string _totalSalesKPI;
         public string TotalSalesKPI
@@ -67,8 +67,7 @@ namespace Invoice.UI.ViewModels
             set { _totalQuantityKPI = value; OnPropertyChanged(); }
         }
 
-
-        // ==================== CHART PROPERTIES ====================
+        // ==================== CHART MODELS ====================
 
         private PlotModel _priceTrendModel;
         public PlotModel PriceTrendModel
@@ -91,14 +90,6 @@ namespace Invoice.UI.ViewModels
             set { _itemsPieModel = value; OnPropertyChanged(); }
         }
 
-        // Add this property to the class to fix CS0103
-        private PlotModel _topItemsModel;
-        public PlotModel TopItemsModel
-        {
-            get => _topItemsModel;
-            set { _topItemsModel = value; OnPropertyChanged(); }
-        }
-
         // ==================== CONSTRUCTOR ====================
 
         public CustomerDashboardViewModel(List<CustomerReportDto> reports)
@@ -109,22 +100,21 @@ namespace Invoice.UI.ViewModels
             AvailableYears = new ObservableCollection<int>(_allReports.Select(x => x.Year).Distinct());
             AvailableMonths = new ObservableCollection<int>(_allReports.Select(x => x.Month).Distinct());
 
-            // Default filters
             SelectedItem = AvailableItems.FirstOrDefault();
             SelectedYear = AvailableYears.FirstOrDefault();
-            SelectedMonth = -1; // (All months)
+            SelectedMonth = -1;
 
             BuildDashboard();
         }
 
-        // ==================== FILTER LOGIC ====================
+        // ==================== FILTER ====================
 
         private void OnFilterChanged()
         {
             BuildDashboard();
         }
 
-        private IEnumerable<CustomerReportDto> FilteredReports()
+        private List<CustomerReportDto> FilteredReports()
         {
             var data = _allReports.AsEnumerable();
 
@@ -137,22 +127,23 @@ namespace Invoice.UI.ViewModels
             if (SelectedMonth > 0)
                 data = data.Where(x => x.Month == SelectedMonth);
 
-            return data;
+            return data.ToList();
         }
 
-        // ==================== BUILD DASHBOARD ====================
+        // ==================== DASHBOARD BUILDER ====================
 
         private void BuildDashboard()
         {
-            var data = FilteredReports().ToList();
+            var data = FilteredReports();
 
             BuildKPIs(data);
-            BuildPriceTrend(data);
-            BuildQuantityTrend();
-            BuildPieChart();
+
+            PriceTrendModel = BuildPriceTrend(data);
+            QuantityTrendModel = BuildQuantityTrend(data);
+            ItemsPieModel = BuildPieChart(data);
         }
 
-        // ==================== KPI BUILDER ====================
+        // ==================== KPI ====================
 
         private void BuildKPIs(List<CustomerReportDto> data)
         {
@@ -166,40 +157,29 @@ namespace Invoice.UI.ViewModels
                 .FirstOrDefault() ?? "-";
         }
 
-        // ==================== PRICE TREND (Line Chart) ====================
+        // ==================== PRICE TREND ====================
 
-        private void BuildPriceTrend(List<CustomerReportDto> data)
+        private PlotModel BuildPriceTrend(List<CustomerReportDto> data)
         {
             var model = new PlotModel
             {
                 Title = "Price Trend",
-                Background = OxyColors.White,
-                TextColor = OxyColors.Black
+                Background = OxyColors.White
             };
 
             var compData = data.OrderBy(x => x.Month).ToList();
 
-            var catAxis = new CategoryAxis
-            {
-                Position = AxisPosition.Bottom,
-                TextColor = OxyColors.Black
-            };
+            var catAxis = new CategoryAxis { Position = AxisPosition.Bottom };
 
-            // فقط Labels.Add — بدون ItemsSource
             foreach (var item in compData)
                 catAxis.Labels.Add($"M{item.Month}");
 
             model.Axes.Add(catAxis);
-
-            var valAxis = new LinearAxis { Position = AxisPosition.Left, TextColor = OxyColors.Black };
-            model.Axes.Add(valAxis);
+            model.Axes.Add(new LinearAxis { Position = AxisPosition.Left });
 
             var series = new LineSeries
             {
-                Color = OxyColors.SteelBlue,
-                StrokeThickness = 3,
-                MarkerType = MarkerType.Circle,
-                MarkerSize = 5
+                MarkerType = MarkerType.Circle
             };
 
             for (int i = 0; i < compData.Count; i++)
@@ -207,156 +187,98 @@ namespace Invoice.UI.ViewModels
 
             model.Series.Add(series);
 
-            PriceTrendModel = model;
+            return model;
         }
 
-        // ==================== TOP ITEMS (Bar Chart) ====================
+        // ==================== QUANTITY TREND ====================
 
-        private void BuildQuantityTrend()
+        private PlotModel BuildQuantityTrend(List<CustomerReportDto> data)
         {
-            try
+            var top = data
+                .GroupBy(x => x.InternalCode)
+                .Select(g => new { Item = g.Key, Qty = g.Sum(x => x.TotalQuantity) })
+                .OrderByDescending(x => x.Qty)
+                .Take(10)
+                .ToList();
+
+            var model = new PlotModel
             {
-                // استخدام جميع البيانات بدون فلترة
-                var top = _allReports // <-- كل البيانات
-                    .GroupBy(x => x.InternalCode)
-                    .Select(g => new { Item = g.Key, Qty = g.Sum(x => x.TotalQuantity) })
-                    .OrderByDescending(x => x.Qty) // أعلى الأصناف أولاً
-                    .Take(50) // أخذ أعلى 5 أصناف 
-                    .ToList();
+                Background = OxyColors.White
+            };
 
-                // تحقق من وجود بيانات
-                if (!top.Any())
-                {
-                    System.Diagnostics.Debug.WriteLine("No data available for Top Items chart.");
-                    return;
-                }
-
-                // إنشاء نموذج الرسم البياني
-                var model = new PlotModel
-                {
-                   // Title = "📦 أعلى 5 أصناف من حيث الكمية",
-                    Background = OxyColors.White,
-                    TextColor = OxyColors.Black
-                };
-
-                // المحور التصنيفي (Y-axis)
-                var categoryAxis = new CategoryAxis
-                {
-                    Position = AxisPosition.Left,
-                    GapWidth = 0.3,
-                    IsTickCentered = true
-                };
-                foreach (var it in top)
-                    categoryAxis.Labels.Add(it.Item);
-                model.Axes.Add(categoryAxis);
-
-                // المحور العددي (X-axis)
-                var valueAxis = new LinearAxis
-                {
-                    Position = AxisPosition.Bottom,
-                    MinimumPadding = 0,
-                    AbsoluteMinimum = 0,
-                    Title = "الكمية"
-                };
-                model.Axes.Add(valueAxis);
-
-                // إضافة الـ BarSeries
-                var series = new BarSeries
-                {
-                    ItemsSource = top.Select(t => new BarItem { Value = (double)t.Qty }).ToList(),
-                    FillColor = OxyColors.SkyBlue
-                };
-                model.Series.Add(series);
-
-                // تعيين النموذج إلى الخاصية المرتبطة بالـ PlotView
-                TopItemsModel = model!;
-            }
-            catch (Exception ex)
+            var catAxis = new CategoryAxis
             {
-                System.Windows.MessageBox.Show("Quantity Trend Error:\n" + ex.ToString());
-            }
+                Position = AxisPosition.Left
+            };
+
+            foreach (var it in top)
+                catAxis.Labels.Add(it.Item);
+
+            model.Axes.Add(catAxis);
+
+            model.Axes.Add(new LinearAxis
+            {
+                Position = AxisPosition.Bottom,
+                Minimum = 0
+            });
+
+            var series = new BarSeries
+            {
+                FillColor = OxyColors.SkyBlue
+            };
+
+            foreach (var item in top)
+                series.Items.Add(new BarItem { Value = (double)item.Qty });
+
+            model.Series.Add(series);
+
+            return model;
         }
-
 
         // ==================== PIE CHART ====================
 
-        private void BuildPieChart()
+        private PlotModel BuildPieChart(List<CustomerReportDto> data)
         {
-            try
+            var allData = data
+                .GroupBy(x => x.InternalCode)
+                .Select(g => new { Item = g.Key, Sales = g.Sum(x => x.TotalSales) })
+                .OrderByDescending(x => x.Sales)
+                .ToList();
+
+            var totalSales = (double)allData.Sum(x => x.Sales);
+
+            var model = new PlotModel
             {
-                // استخدام كل البيانات بدون فلترة
-                var allData = _allReports
-                    .GroupBy(x => x.InternalCode)
-                    .Select(g => new { Item = g.Key, Sales = g.Sum(x => x.TotalSales) })
-                    .OrderByDescending(x => x.Sales)
-                    .ToList();
+                Background = OxyColors.White
+            };
 
-                if (!allData.Any())
-                {
-                    System.Diagnostics.Debug.WriteLine("No data available for Pie Chart.");
-                    return;
-                }
-
-                // احسب مجموع المبيعات الكلي
-                double totalSales = (double)allData.Sum(x => x.Sales);
-
-                // قسم البيانات: أعلى 5 أصناف + باقي الأصناف تحت "Others"
-                var top5 = allData.Take(50).ToList();
-                var others = allData.Skip(50).ToList();
-                double othersSum = (double)others.Sum(x => x.Sales);
-
-                // إنشاء نموذج الرسم البياني
-                var model = new PlotModel
-                {
-                   // Title = "🍰 توزيع المبيعات حسب الأصناف (Top 5 + Others)",
-                    Background = OxyColors.White,
-                    TextColor = OxyColors.Black
-                };
-
-                // إنشاء PieSeries
-                var pie = new PieSeries
-                {
-                    Stroke = OxyColors.White,
-                    InsideLabelColor = OxyColors.Black,
-                    AngleSpan = 360,
-                    StartAngle = 0,
-                   // InsideLabelFormat = "{1:0.0}%" // عرض النسبة المئوية داخل القطعة
-                };
-
-                // إضافة أعلى 10 أصناف
-                foreach (var item in top5)
-                {
-                    double percentage = totalSales == 0 ? 0 : ((double)item.Sales / (double)totalSales) * 100;
-
-                    pie.Slices.Add(new PieSlice(item.Item, percentage) { IsExploded = false });
-                }
-
-                // إضافة "Others" إذا كان موجود
-                if (othersSum > 0)
-                {
-                    double othersPercentage = (othersSum / totalSales) * 100;
-                    pie.Slices.Add(new PieSlice("Others", othersPercentage) { IsExploded = false, Fill = OxyColors.LightGray });
-                }
-
-                model.Series.Add(pie);
-
-                // تعيين النموذج للـ PlotView
-                ItemsPieModel = model!;
-            }
-            catch (Exception ex)
+            var pie = new PieSeries
             {
-                System.Windows.MessageBox.Show("Pie Chart Error:\n" + ex.ToString());
+                Stroke = OxyColors.White
+            };
+
+            foreach (var item in allData.Take(10))
+            {
+                double percentage = totalSales == 0
+                    ? 0
+                    : ((double)item.Sales / totalSales) * 100;
+
+                pie.Slices.Add(new PieSlice(item.Item, percentage));
             }
+
+            model.Series.Add(pie);
+
+            return model;
         }
 
-
-
-
-
+        // ==================== NOTIFY ====================
 
         public event PropertyChangedEventHandler PropertyChanged;
+
         protected void OnPropertyChanged([CallerMemberName] string name = null)
-            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
     }
 }
 

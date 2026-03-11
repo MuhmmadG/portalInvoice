@@ -306,6 +306,7 @@ C:\InvoicePortal\Invoice.UI\bin\Debug\net10.0-windows\Invoice.Core.pdb
 C:\InvoicePortal\Invoice.UI\bin\Debug\net10.0-windows\Invoice.Data.pdb
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Invoice.UI.csproj.AssemblyReference.cache
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\MainWindow.baml
+C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\CustomerBalancesView.baml
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\CustomerDashboardView.baml
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\CustomerInvoicesView.baml
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\CustomerJournalView.baml
@@ -315,10 +316,12 @@ C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\ExternalExpenseView.
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\FinancialJournalView.baml
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\OtherExpenseView.baml
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\ProductReportWindow.baml
+C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\SupplierBalancesView.baml
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\SupplierInvoicesView.baml
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\SupplierJournalView.baml
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\TaxReportView.baml
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\MainWindow.g.cs
+C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\CustomerBalancesView.g.cs
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\CustomerDashboardView.g.cs
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\CustomerInvoicesView.g.cs
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\CustomerJournalView.g.cs
@@ -332,6 +335,7 @@ C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\FinancialTransaction
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\OtherExpenseView.g.cs
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\ProductReportWindow.g.cs
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\PurshaseView.g.cs
+C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\SupplierBalancesView.g.cs
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\SupplierInvoicesView.g.cs
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\SupplierJournalView.g.cs
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\TaxReportView.g.cs
@@ -349,13 +353,10 @@ C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Invoice.UI.GeneratedMSBuil
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Invoice.UI.AssemblyInfoInputs.cache
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Invoice.UI.AssemblyInfo.cs
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Invoice.UI.csproj.CoreCompileInputs.cache
+C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Invoice.UI.sourcelink.json
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Invoice.UI.csproj.Up2Date
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Invoice.UI.dll
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\refint\Invoice.UI.dll
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Invoice.UI.pdb
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Invoice.UI.genruntimeconfig.cache
 C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\ref\Invoice.UI.dll
-C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\CustomerBalancesView.g.cs
-C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\CustomerBalancesView.baml
-C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\SupplierBalancesView.baml
-C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\Views\SupplierBalancesView.g.cs

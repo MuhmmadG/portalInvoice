@@ -101,22 +101,22 @@
 
             <StackPanel>
                 <TextBlock Text="المبيعات" FontWeight="Bold"/>
-                <TextBox Text="{Binding SalesTotal}" IsReadOnly="True" Width="150" Margin="5" Style="{StaticResource FlatTextBox}"/>
+                <TextBox Text="{Binding SalesTotal , StringFormat=N2}" IsReadOnly="True" Width="150" Margin="5" Style="{StaticResource FlatTextBox}"/>
             </StackPanel>
 
             <StackPanel>
                 <TextBlock Text="ضريبة القيمة المضافة" FontWeight="Bold"/>
-                <TextBox Text="{Binding VatTotal}" IsReadOnly="True" Width="150" Margin="5" Style="{StaticResource FlatTextBox}"/>
+                <TextBox Text="{Binding VatTotal , StringFormat=N2}" IsReadOnly="True" Width="150" Margin="5" Style="{StaticResource FlatTextBox}"/>
             </StackPanel>
 
             <StackPanel>
                 <TextBlock Text="ضريبة 1%" FontWeight="Bold"/>
-                <TextBox Text="{Binding Tax1Total}" IsReadOnly="True" Width="150" Margin="5" Style="{StaticResource FlatTextBox}"/>
+                <TextBox Text="{Binding Tax1Total , StringFormat=N2}" IsReadOnly="True" Width="150" Margin="5" Style="{StaticResource FlatTextBox}"/>
             </StackPanel>
 
             <StackPanel>
                 <TextBlock Text="إجمالي المبيعات" FontWeight="Bold"/>
-                <TextBox Text="{Binding GrandTotal}" IsReadOnly="True" Width="150" Margin="5" Style="{StaticResource FlatTextBox}"/>
+                <TextBox Text="{Binding GrandTotal , StringFormat=N2}" IsReadOnly="True" Width="150" Margin="5" Style="{StaticResource FlatTextBox}"/>
             </StackPanel>
         </StackPanel>
 
