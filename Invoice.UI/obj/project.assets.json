@@ -6547,23 +6547,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Muhmmad Gamal\\.nuget\\packages\\": {},
+    "C:\\Users\\Mega Store\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\InvoicePortal\\Invoice.UI\\Invoice.UI.csproj",
+      "projectUniqueName": "C:\\Users\\Mega Store\\source\\repos\\portalInvoice\\Invoice.UI\\Invoice.UI.csproj",
       "projectName": "Invoice.UI",
-      "projectPath": "C:\\InvoicePortal\\Invoice.UI\\Invoice.UI.csproj",
-      "packagesPath": "C:\\Users\\Muhmmad Gamal\\.nuget\\packages\\",
-      "outputPath": "C:\\InvoicePortal\\Invoice.UI\\obj\\",
+      "projectPath": "C:\\Users\\Mega Store\\source\\repos\\portalInvoice\\Invoice.UI\\Invoice.UI.csproj",
+      "packagesPath": "C:\\Users\\Mega Store\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mega Store\\source\\repos\\portalInvoice\\Invoice.UI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Muhmmad Gamal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mega Store\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -6579,11 +6579,11 @@
         "net10.0-windows7.0": {
           "targetAlias": "net10.0-windows",
           "projectReferences": {
-            "C:\\InvoicePortal\\Invoice.Core\\Invoice.Core.csproj": {
-              "projectPath": "C:\\InvoicePortal\\Invoice.Core\\Invoice.Core.csproj"
+            "C:\\Users\\Mega Store\\source\\repos\\portalInvoice\\Invoice.Core\\Invoice.Core.csproj": {
+              "projectPath": "C:\\Users\\Mega Store\\source\\repos\\portalInvoice\\Invoice.Core\\Invoice.Core.csproj"
             },
-            "C:\\InvoicePortal\\Invoice.Data\\Invoice.Data.csproj": {
-              "projectPath": "C:\\InvoicePortal\\Invoice.Data\\Invoice.Data.csproj"
+            "C:\\Users\\Mega Store\\source\\repos\\portalInvoice\\Invoice.Data\\Invoice.Data.csproj": {
+              "projectPath": "C:\\Users\\Mega Store\\source\\repos\\portalInvoice\\Invoice.Data\\Invoice.Data.csproj"
             }
           }
         }

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\InvoicePortal\Invoice.UI\obj\Debug\net10.0-windows\
+C:\Users\Mega Store\source\repos\portalInvoice\Invoice.UI\obj\Debug\net10.0-windows\
 Invoice.UI
 none
 false
 TRACE;DEBUG;NET;NET10_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NET10_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\InvoicePortal\Invoice.UI\App.xaml
+C:\Users\Mega Store\source\repos\portalInvoice\Invoice.UI\App.xaml
 19-725424912
 1746678314
 52-2038733415
-307912631486
+307674691835
 MainWindow.xaml;Views\CustomerBalancesView.xaml;Views\CustomerDashboardView.xaml;Views\CustomerInvoicesView.xaml;Views\CustomerJournalView.xaml;Views\CustomerReportWindow.xaml;Views\DashboardView.xaml;Views\ExpenseAnalysisView.xaml;Views\ExternalExpenseView.xaml;Views\ExternalPurchaseReportView.xaml;Views\FinancialJournalView.xaml;Views\FinancialTransactionView.xaml;Views\OtherExpenseView.xaml;Views\ProductReportWindow.xaml;Views\PurshaseView.xaml;Views\SupplierBalancesView.xaml;Views\SupplierInvoicesView.xaml;Views\SupplierJournalView.xaml;Views\TaxReportView.xaml;
 
-True
+False
 

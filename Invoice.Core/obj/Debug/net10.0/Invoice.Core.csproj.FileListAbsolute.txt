@@ -11,3 +11,16 @@ C:\InvoicePortal\Invoice.Core\obj\Debug\net10.0\Invoice.Core.dll
 C:\InvoicePortal\Invoice.Core\obj\Debug\net10.0\refint\Invoice.Core.dll
 C:\InvoicePortal\Invoice.Core\obj\Debug\net10.0\Invoice.Core.pdb
 C:\InvoicePortal\Invoice.Core\obj\Debug\net10.0\ref\Invoice.Core.dll
+C:\Users\Mega Store\source\repos\portalInvoice\Invoice.Core\bin\Debug\net10.0\Invoice.Core.deps.json
+C:\Users\Mega Store\source\repos\portalInvoice\Invoice.Core\bin\Debug\net10.0\Invoice.Core.dll
+C:\Users\Mega Store\source\repos\portalInvoice\Invoice.Core\bin\Debug\net10.0\Invoice.Core.pdb
+C:\Users\Mega Store\source\repos\portalInvoice\Invoice.Core\obj\Debug\net10.0\Invoice.Core.csproj.AssemblyReference.cache
+C:\Users\Mega Store\source\repos\portalInvoice\Invoice.Core\obj\Debug\net10.0\Invoice.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mega Store\source\repos\portalInvoice\Invoice.Core\obj\Debug\net10.0\Invoice.Core.AssemblyInfoInputs.cache
+C:\Users\Mega Store\source\repos\portalInvoice\Invoice.Core\obj\Debug\net10.0\Invoice.Core.AssemblyInfo.cs
+C:\Users\Mega Store\source\repos\portalInvoice\Invoice.Core\obj\Debug\net10.0\Invoice.Core.csproj.CoreCompileInputs.cache
+C:\Users\Mega Store\source\repos\portalInvoice\Invoice.Core\obj\Debug\net10.0\Invoice.Core.sourcelink.json
+C:\Users\Mega Store\source\repos\portalInvoice\Invoice.Core\obj\Debug\net10.0\Invoice.Core.dll
+C:\Users\Mega Store\source\repos\portalInvoice\Invoice.Core\obj\Debug\net10.0\refint\Invoice.Core.dll
+C:\Users\Mega Store\source\repos\portalInvoice\Invoice.Core\obj\Debug\net10.0\Invoice.Core.pdb
+C:\Users\Mega Store\source\repos\portalInvoice\Invoice.Core\obj\Debug\net10.0\ref\Invoice.Core.dll

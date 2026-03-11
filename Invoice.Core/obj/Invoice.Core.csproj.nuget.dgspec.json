@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\InvoicePortal\\Invoice.Core\\Invoice.Core.csproj": {}
+    "C:\\Users\\Mega Store\\source\\repos\\portalInvoice\\Invoice.Core\\Invoice.Core.csproj": {}
   },
   "projects": {
-    "C:\\InvoicePortal\\Invoice.Core\\Invoice.Core.csproj": {
+    "C:\\Users\\Mega Store\\source\\repos\\portalInvoice\\Invoice.Core\\Invoice.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\InvoicePortal\\Invoice.Core\\Invoice.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Mega Store\\source\\repos\\portalInvoice\\Invoice.Core\\Invoice.Core.csproj",
         "projectName": "Invoice.Core",
-        "projectPath": "C:\\InvoicePortal\\Invoice.Core\\Invoice.Core.csproj",
-        "packagesPath": "C:\\Users\\Muhmmad Gamal\\.nuget\\packages\\",
-        "outputPath": "C:\\InvoicePortal\\Invoice.Core\\obj\\",
+        "projectPath": "C:\\Users\\Mega Store\\source\\repos\\portalInvoice\\Invoice.Core\\Invoice.Core.csproj",
+        "packagesPath": "C:\\Users\\Mega Store\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mega Store\\source\\repos\\portalInvoice\\Invoice.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Muhmmad Gamal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mega Store\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
