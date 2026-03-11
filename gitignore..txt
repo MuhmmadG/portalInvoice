@@ -1,8 +1,30 @@
+## Visual Studio الملفات المؤقتة الخاصة بـ
 .vs/
-[Bb]in/
-[Oo]bj/
 *.user
 *.suo
+*.userosscache
+*.sln.docstates
+
+## Build Outputs (المجلدات التي سببت لك المشاكل)
+[Bb]in/
+[Oo]bj/
+
+## ملفات الـ Migration (لا نحذف الكود، بل الملفات المؤقتة)
 *.pdb
+*.log
+
+## ملفات نظام الويندوز
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+## ملفات قواعد البيانات (بما أنك تستخدم ميكريشن، لا نحتاج لرفع الملفات نفسها)
+*.mdf
+*.ldf
+*.sdf
+
+## ملفات الـ Release الكبيرة (التي سببت خطأ الـ 100 ميجا)
 *.msi
 *.exe
+*.zip
+*.rar
