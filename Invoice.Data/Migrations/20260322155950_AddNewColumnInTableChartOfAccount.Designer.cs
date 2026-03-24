@@ -4,6 +4,7 @@ using Invoice.Data.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Invoice.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260322155950_AddNewColumnInTableChartOfAccount")]
+    partial class AddNewColumnInTableChartOfAccount
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -517,68 +520,6 @@ namespace Invoice.Data.Migrations
                     b.ToTable("ItemMappings", (string)null);
                 });
 
-            modelBuilder.Entity("Invoice.Core.Model.JournalEntry", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .HasMaxLength(1000)
-                        .HasColumnType("nvarchar(1000)");
-
-                    b.Property<int?>("DocumentModelId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("Date")
-                        .HasDatabaseName("IX_JournalEntries_Date");
-
-                    b.HasIndex("DocumentModelId");
-
-                    b.ToTable("JournalEntries", (string)null);
-                });
-
-            modelBuilder.Entity("Invoice.Core.Model.JournalEntryLine", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("AccountId")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("Credit")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<decimal>("Debit")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("Description")
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<int>("JournalEntryId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AccountId");
-
-                    b.HasIndex("JournalEntryId")
-                        .HasDatabaseName("IX_JournalEntryLines_JournalEntryId");
-
-                    b.ToTable("JournalEntryLines", (string)null);
-                });
-
             modelBuilder.Entity("Invoice.Core.Model.OtherExpense", b =>
                 {
                     b.Property<int>("Id")
@@ -869,35 +810,6 @@ namespace Invoice.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Invoice.Core.Model.JournalEntry", b =>
-                {
-                    b.HasOne("Invoice.Core.Model.DocumentModel", "DocumentModel")
-                        .WithMany()
-                        .HasForeignKey("DocumentModelId")
-                        .OnDelete(DeleteBehavior.SetNull);
-
-                    b.Navigation("DocumentModel");
-                });
-
-            modelBuilder.Entity("Invoice.Core.Model.JournalEntryLine", b =>
-                {
-                    b.HasOne("Invoice.Core.Model.ChartOfAccount", "Account")
-                        .WithMany()
-                        .HasForeignKey("AccountId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("Invoice.Core.Model.JournalEntry", "JournalEntry")
-                        .WithMany("Lines")
-                        .HasForeignKey("JournalEntryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Account");
-
-                    b.Navigation("JournalEntry");
-                });
-
             modelBuilder.Entity("Invoice.Core.Model.OtherExpense", b =>
                 {
                     b.HasOne("Invoice.Core.Model.ExpenseCategory", "ExpenseCategory")
@@ -976,11 +888,6 @@ namespace Invoice.Data.Migrations
             modelBuilder.Entity("Invoice.Core.Model.ItemCodeConfig", b =>
                 {
                     b.Navigation("InvoiceLines");
-                });
-
-            modelBuilder.Entity("Invoice.Core.Model.JournalEntry", b =>
-                {
-                    b.Navigation("Lines");
                 });
 
             modelBuilder.Entity("Invoice.Core.Model.Party", b =>

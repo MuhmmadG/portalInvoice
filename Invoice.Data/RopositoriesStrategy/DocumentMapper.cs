@@ -3,6 +3,7 @@ using DocumentFormat.OpenXml.Vml;
 using Invoice.Core.Model;
 using Invoice.Data.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Graph.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,8 +21,9 @@ namespace Invoice.Data.RopositoriesStrategy
         {
             _context = context;
         }
-        public async Task MapAndSaveDocumentPurchaese(List<DocumentModelDto> dto, int selectedExpenseCategoryId)
+        public async Task<DocumentModel> MapAndSaveDocumentPurchaese(List<DocumentModelDto> dto, int selectedExpenseCategoryId)
         {
+            DocumentModel savedDoc = null;
             foreach (var item in dto)
             {
                 var entity = MapDocumentPurchase(item, selectedExpenseCategoryId);
@@ -29,9 +31,11 @@ namespace Invoice.Data.RopositoriesStrategy
                 AttachImportedItem(item, entity);
 
                 _context.Documents.Add(entity);
+                savedDoc = entity;
             }
 
             await _context.SaveChangesAsync();
+            return savedDoc;
         }
         public async Task MapAndSaveDocumentSale(List<DocumentModelDto> dto)
         {
@@ -87,7 +91,7 @@ namespace Invoice.Data.RopositoriesStrategy
         }
         private DocumentModel MapDocumentPurchase(DocumentModelDto item, int expenseCategoryId)
         {
-            return new DocumentModel
+            var doc = new DocumentModel
             {
                 InternalId = item.InternalId,
                 DateTimeIssued = item.DateTimeIssued,
@@ -103,6 +107,37 @@ namespace Invoice.Data.RopositoriesStrategy
                 InvoiceLines = MapInvoiceLinesPurchase(item),
                 TaxTotals = MapTaxTotals(item)
             };
+
+            // إذا كان المستخدم قد اختر حساب مدين ودائن من الواجهة، نسجل قيد مزدوج (Debit & Credit)
+            // Debit -> SelectedAccountId (مثلاً: مصروفات مشتريات)
+            // Credit -> SelectedCreditAccountId (مثلاً: موردين)
+            if (item.SelectedAccountId.HasValue && item.SelectedCreditAccountId.HasValue)
+            {
+                // مدين
+                var debit = new FinancialTransaction
+                {
+                    Date = item.DateTimeReceived,
+                    TransactionType = TransactionType.Payment,
+                    AccountId = item.SelectedAccountId.Value,
+                    Amount = item.Total,
+                    Notes = $"مدين - فاتورة مشتريات {item.InternalId}"
+                };
+
+                // دائن
+                var credit = new FinancialTransaction
+                {
+                    Date = item.DateTimeReceived,
+                    TransactionType = TransactionType.Payment,
+                    AccountId = item.SelectedCreditAccountId.Value,
+                    Amount = item.Total * -1, // سالب لتمثيل الجانب الدائن
+                    Notes = $"دائن - فاتورة مشتريات {item.InternalId}"
+                };
+
+                //doc.FinancialTransactions.Add(debit);
+                //doc.FinancialTransactions.Add(credit);
+            }
+
+            return doc;
         }
         private DocumentModel MapDocumentSale(DocumentModelDto item)
         {

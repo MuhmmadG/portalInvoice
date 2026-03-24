@@ -44,6 +44,8 @@ namespace Invoice.Data.Data
             modelBuilder.ApplyConfiguration(new Configrations.OtherExpenseConfiguration());
             modelBuilder.ApplyConfiguration(new Configrations.FinancialTransactionConfiguration());
             modelBuilder.ApplyConfiguration(new Configrations.ChartOfAccountConfiguration());
+            modelBuilder.ApplyConfiguration(new Configrations.JournalEntryConfiguration());
+            modelBuilder.ApplyConfiguration(new Configrations.JournalEntryLineConfiguration());
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<CustomerBalanceView>(entity =>
@@ -72,6 +74,8 @@ namespace Invoice.Data.Data
         public DbSet<ItemCodeConfig> ItemMappings => Set<ItemCodeConfig>();
         public DbSet<OtherExpense> OtherExpenses { get; set; }
         public DbSet<FinancialTransaction> FinancialTransactions { get; set; }
+        public DbSet<JournalEntry> JournalEntries { get; set; }
+        public DbSet<JournalEntryLine> JournalEntryLines { get; set; }
         public DbSet<CustomerBalanceView> CustomerBalances { get; set; }
         public DbSet<SupplierBalanceView> SupplierBalances { get; set; }
         public DbSet<ChartOfAccount> ChartOfAccounts { get; set; }
